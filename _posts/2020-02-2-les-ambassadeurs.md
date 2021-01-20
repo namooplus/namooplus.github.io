@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Les Ambassadeurs, the first Restaurant we Visited in Paris"
+title:  "테스트 게시물"
 author: sal
 categories: [ Lifestyle ]
 tags: [ France ]
