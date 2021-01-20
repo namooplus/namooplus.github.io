@@ -4,9 +4,9 @@ title: "나무의 노트"
 description: "1인 대학생 개발자, 나무"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
-baseurl: '/jekyll-theme-memoirs'
+baseurl:
 google_analytics: 'UA-xxxxxxxx-1'
-disqus: 'demowebsite'
+disqus: 'namoo'
 mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 include: ["_pages"]
 permalink: /:title/
