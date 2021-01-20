@@ -16,7 +16,7 @@ Always a center of entertainment for the aristocracy, in the 1870s it also becam
 
 Following a renovation of the hotel in 1981–85, the restaurant occupied a former private ballroom with windows looking out on the Place de la Concorde, a few hundred meters from the Palais Garnier. 
 
-![test image](assets/images/2.jpg)
+![test image](./assets/images/2.jpg)
 
 Les Ambassadeurs had two Michelin stars. In the last decade of its operation, chef was Dominique Bouchet  followed by Jean-François Piège and finally when the hotel closed in 2013 for an extended renovation, Christopher Hache.
 
