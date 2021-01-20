@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Memoirs, a free minimalist Jekyll blogging theme with modern design 
+title: 1인 대학생 개발자 나무
 permalink: /about
 comments: false
 image: assets/images/screenshot.jpg
