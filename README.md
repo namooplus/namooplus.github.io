@@ -1,5 +1,4 @@
-# Memoirs Jekyll Theme
+# 나무의 노트
 
-[Live Demo](https://wowthemesnet.github.io/jekyll-theme-memoirs/) | [Docs & Download](https://bootstrapstarter.com/bootstrap-templates/jekyll-theme-memoirs/) |  [Buy me a coffee](https://www.wowthemes.net/donate/)
-
-![memoirs](https://bootstrapstarter.com/assets/img/themes/memoirs-jekyll.jpg)
+## 나무의 노트
+[Github](https://namooplus.github.io/) | [Tistory](https://namooplus.tistory.com/)
