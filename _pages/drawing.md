@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 소개
-permalink: /about
+title: 나무의 그림 농장
+permalink: /drawing
 comments: false
 image: assets/images/screenshot.jpg
 imageshadow: true

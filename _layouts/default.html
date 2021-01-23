@@ -50,9 +50,15 @@ ga('send', 'pageview');
 <nav id="menu">
     <ul>
         <h3>나무의 노트</h3>
-        <li><a href="{{ site.baseurl }}/">메인</a></li>
-        <li><a href="{{ site.baseurl }}/about">나무 <span class="badge badge-primary">정보</span></a></li>  
-        <li><a href="{{ site.baseurl }}/categories">카테고리</a></li>       
+        <li><a href="{{ site.baseurl }}/about">소개 <span class="badge badge-primary">나무</span></a></li>
+        <hr/>
+        <h6>블로그</h6>
+        <li><a href="{{ site.baseurl }}/">모든 포스트</a></li>
+        <li><a href="{{ site.baseurl }}/categories">카테고리</a></li>
+        <hr/>
+        <h6>프로젝트</h6> 
+        <li><a href="{{ site.baseurl }}/development">안드로이드 앱 개발</a></li>
+        <li><a href="{{ site.baseurl }}/drawing">나무의 그림 농장</a></li>  
     </ul>   
 </nav>
 
@@ -62,7 +68,8 @@ ga('send', 'pageview');
 <!-- End Sidebar Navigation
 ================================================== -->
 
-<div class="site-content {% if page.url == '/' %} firstpage {% endif %}">
+<!--첫 포스트 박스 강조하려면 class에 {% if page.url == '/' %} firstpage {% endif %} 추가-->
+<div class="site-content">
 
 <div class="container">
 

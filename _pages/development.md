@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 소개
-permalink: /about
+title: 안드로이드 앱 개발
+permalink: /development
 comments: false
 image: assets/images/screenshot.jpg
 imageshadow: true
