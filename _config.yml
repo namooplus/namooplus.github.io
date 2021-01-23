@@ -2,8 +2,8 @@
 name: "나무의 노트"
 title: "나무의 노트"
 description: "1인 대학생 개발자, 나무"
-logo: 'assets/images/base/icon_black.png'
-favicon: 'assets/images/base/favicon.ico'
+logo: 'assets/images/base/icon.png'
+favicon: 'assets/images/base/icon.png'
 baseurl:
 google_analytics: 'UA-xxxxxxxx-1'
 disqus: 'namoo'
@@ -18,6 +18,7 @@ authors:
     display_name: 나무
     email: namoo.developer@gmail.com
     instagram: https://www.instagram.com/min.i.stop/
+    github: https://github.com/namooplus
     description: "1인 대학생 개발자, 나무입니다."
 
 # Plugins
