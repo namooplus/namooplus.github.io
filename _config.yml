@@ -7,7 +7,6 @@ favicon: 'assets/images/logo.png'
 baseurl:
 google_analytics: 'UA-xxxxxxxx-1'
 disqus: 'namoo'
-mailchimp-list:
 include: ["_pages"]
 permalink: /:title/
 email: namoo.developer@gmail.com
@@ -17,10 +16,8 @@ authors:
   namoo:
     name: 나무
     display_name: 나무
-    gravatar: e56154546cf4be74e393c62d1ae9f9d4
     email: namoo.developer@gmail.com
-    web: https://www.wowthemes.net/donate/
-    twitter: https://twitter.com/wowthemesnet
+    instagram: https://www.instagram.com/min.i.stop/
     description: "1인 대학생 개발자, 나무입니다."
 
 # Plugins
@@ -59,7 +56,7 @@ adsense-data-ad-client: "ca-pub-3412143450191416"
 adsense-data-ad-slot: "1363087678"
 
 # Lazy Images ("enabled" or "disabled")
-lazyimages: "disabled"
+lazyimages: "enabled"
 
 # Post Author Box ("enabled" or "disabled")
 authorbox: "disabled"
