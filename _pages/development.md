@@ -5,9 +5,9 @@ permalink: /development
 comments: false
 ---
 
-<br/>
+<hr/>
 
-![title](/assets/images/project/development/namooprotector_icon.png){: width="80" height="80"}
+![나무프로텍터 아이콘](/assets/images/project/development/namooprotector_icon.png){: width="80" height="80"}
 
 # 나무프로텍터 
 
@@ -15,12 +15,16 @@ comments: false
 
 나무프로텍터는 설정한 PIN, 패턴 혹은 지문인식으로 앱을 잠궈 보호하는 어플 잠금 서비스입니다. 필수적이고 정말 유용할만한 기능만이 포함되어 빠르고 가벼운 동시에 잠금화면을 직관적으로 커스텀할 수 있어 사용자 친화적입니다. 특히 오픈소스로 공개되어 안전합니다.
 
+![나무프로텍터 스크린샷 1](/assets/images/project/development/namooprotector_screenshot1.jpg){: width="40%"}
+![나무프로텍터 스크린샷 2](/assets/images/project/development/namooprotector_screenshot2.jpg){: width="40%"}
+
 <a target="_blank" href="https://play.google.com/store/apps/details?id=nm.security.namooprotector" class="btn btn-dark"> 플레이스토어 </a>
+<br/><br/>
 <a target="_blank" href="https://github.com/namooplus/NamooProtector" class="btn btn-dark"> 깃허브 </a>
 
 <hr/>
 
-![title](/assets/images/project/development/hange_icon.png){: width="80" height="80"}
+![Hange 아이콘](/assets/images/project/development/hange_icon.png){: width="80" height="80"}
 
 # Hange
 

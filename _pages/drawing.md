@@ -3,11 +3,16 @@ layout: page
 title: 나무의 그림 농장
 permalink: /drawing
 comments: false
-image: assets/images/screenshot.jpg
-imageshadow: true
 ---
 
-This website is a demonstration to see **Memoirs Jekyll theme** in action. The theme is compatible with Github pages, in fact even this demo itself is created with Github Pages and hosted with Github. 
+<hr/>
 
-<a target="_blank" href="https://bootstrapstarter.com/bootstrap-templates/jekyll-theme-memoirs/" class="btn btn-dark"> Get Memoirs for Jekyll &rarr;</a>
+일상 속에서 보이는 익숙한 풍경과 사물들을 그립니다. procreate를 이용해 그려졌으며 업로드는 인스타그램을 통해 비주기적으로 진행됩니다.
+
+![드로잉 1](/assets/images/project/drawing/example1.png){: width="40%"}
+![드로잉 2](/assets/images/project/drawing/example2.png){: width="40%"}
+![드로잉 3](/assets/images/project/drawing/example3.png){: width="40%"}
+![드로잉 4](/assets/images/project/drawing/example4.png){: width="40%"}
+
+<a target="_blank" href="https://www.instagram.com/namoo.draw/" class="btn btn-dark">더 많은 그림 보기</a>
 
