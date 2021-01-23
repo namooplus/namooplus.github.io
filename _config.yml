@@ -2,8 +2,8 @@
 name: "나무의 노트"
 title: "나무의 노트"
 description: "1인 대학생 개발자, 나무"
-logo: 'assets/images/logo.png'
-favicon: 'assets/images/logo.png'
+logo: 'assets/images/base/icon_black.png'
+favicon: 'assets/images/base/favicon.ico'
 baseurl:
 google_analytics: 'UA-xxxxxxxx-1'
 disqus: 'namoo'
