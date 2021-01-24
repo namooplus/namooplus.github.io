@@ -11,12 +11,12 @@ post_class: post-template
     <!-- Author & Date  Box -->
     {% assign author = site.authors[page.author] %}
     {% if page.author %}
-    <div class="d-flex align-items-center mt-4">     
+    <div class="d-flex align-items-center mt-4" style="display: flex; justify-content: center;">     
         <div>
-        Written by <a target="_blank" class="text-dark" href="{{ author.instagram }}">{{ author.display_name }}</a> on 
+        <a target="_blank" class="text-dark" href="{{ author.instagram }}">{{ author.display_name }}</a> | 
         <span class="post-date"><time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time></span>           
         {% if page.last_modified_at %}
-        (Updated: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>)
+        (수정됨: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>)
         {% endif %}
         </div>            
     </div>
