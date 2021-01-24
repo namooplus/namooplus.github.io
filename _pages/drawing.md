@@ -5,7 +5,7 @@ permalink: /drawing
 comments: false
 ---
 
-<hr/>
+---
 
 일상 속에서 보이는 익숙한 풍경과 사물들을 그립니다. procreate를 이용해 그려졌으며 업로드는 인스타그램을 통해 비주기적으로 진행됩니다.
 
