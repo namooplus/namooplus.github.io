@@ -6,7 +6,7 @@ logo: 'assets/images/base/icon.png'
 favicon: 'assets/images/base/icon.png'
 baseurl:
 google_analytics: 'UA-xxxxxxxx-1'
-disqus: 'namoo'
+disqus: 'https-namooplus-github-io'
 include: ["_pages"]
 permalink: /:title/
 email: namoo.developer@gmail.com
