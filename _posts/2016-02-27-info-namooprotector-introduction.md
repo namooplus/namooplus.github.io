@@ -12,7 +12,9 @@ featured: true
 
 <br/>
 
-<center><h1>개요</h1></center>
+---
+
+<center><h3>개요</h3></center>
 
 ---
 
@@ -26,11 +28,13 @@ featured: true
 
 <br/>
 
-<center><h1>기능</h1></center>
+---
+
+<center><h3>기능</h3></center>
 
 ---
 
-<center><h3>깔끔한 디자인</h3></center>
+<center><h5 style="color:brown">깔끔한 디자인</h5></center>
 
 <p align="center">
 <img width="40%" src="/assets/images/post/info-namooprotector-introduction/1.png"> 
@@ -39,7 +43,7 @@ featured: true
 
 나무프로텍터는 사용자가 특정 기능들을 손쉽게 찾고 설정할 수 있도록 직관적으로 디자인되었습니다. 특히 9개의 패턴 바탕의 메인화면과 단색 중심의 잠금화면을 통해 깔끔한 사용자 환경을 제공합니다.
 
-<center><h3>세세한 설정</h3></center>
+<center><h5 style="color:brown">세세한 설정</h5></center>
 
 <p align="center">
 <img width="40%" src="/assets/images/post/info-namooprotector-introduction/3.png"> 
@@ -48,13 +52,13 @@ featured: true
 
 나무프로텍터는 개인의 성향을 존중하여 사소한 부분까지 설정할 수 있습니다. 잠금화면 애니메이션부터 키 터치 진동 피드백까지 다양하게 커스텀할 수 있습니다. 앞으로도 업데이트를 통해 추가적인 기능이 제공될 예정입니다.
 
-<center><h3>백업 및 복원</h3></center>
+<center><h5 style="color:brown">백업 및 복원</h5></center>
 
 <center><img width="40%" src="/assets/images/post/info-namooprotector-introduction/5.png"></center>
 
 앱 잠금 앱의 특성상 초기 설정 시 잠글 앱을 선택해야 합니다. 하지만 폰을 바꾸거나 초기화를 했을 경우 다시 잠금 앱을 선택하는 것은 여간 번거러운 일이 아닙니다. 따라서 나무프로텍터는 백업을 제공합니다. 백업은 잠금 앱 목록은 물론 세부 설정까지 지원해 사실상 한 번의 설정으로 여러 기기에서 지속적으로 이용할 수 있습니다.
 
-<center><h3>테마</h3></center>
+<center><h5 style="color:brown">테마</h5></center>
 
 <p align="center">
 <img width="40%" src="/assets/images/post/info-namooprotector-introduction/6.png"> 
@@ -67,13 +71,13 @@ featured: true
 
 **세세한 설정**에서 말씀드렸듯이 나무프로텍터는 개인의 성향을 존중합니다. 따라서 세부적인 설정 외에도 잠금화면 역시 입맛에 맞게 수정할 수 있도록 설계되었습니다. 위 사진과 같이 배경은 갤러리의 사진으로도 설정할 수 있으며 앱 아이콘 크기, 버튼 색상, 뷰어 크기 등 다양하게 커스텀할 수 있습니다.
 
-<center><h3>좋은 호환성</h3></center>
+<center><h5 style="color:brown">좋은 호환성</h5></center>
 
 <center><img width="40%" src="/assets/images/post/info-namooprotector-introduction/10.png"></center>
 
 나무프로텍터는 안드로이드 4.0 (아이스크림 샌드위치)부터 안드로이드 7.1 (누가)까지 호환됩니다. <span style="color:gray">(2017년 3월 4일 기준)</span> 호환성 업데이트는 꾸준히 제공될 예정입니다.
 
-<center><h3>플러그인</h3></center>
+<center><h5 style="color:brown">플러그인</h5></center>
 
 <p align="center">
 <img width="40%" src="/assets/images/post/info-namooprotector-introduction/11.png"> 
@@ -88,7 +92,9 @@ featured: true
 
 <br/>
 
-<center><h1>다운로드</h1></center>
+---
+
+<center><h3>다운로드</h3></center>
 
 ---
 
@@ -96,7 +102,9 @@ featured: true
 
 <br/>
 
-<center><h1>마치며</h1></center>
+---
+
+<center><h3>마치며</h3></center>
 
 ---
 
