@@ -14,7 +14,7 @@ post_class: post-template
     <div class="d-flex align-items-center mt-4" style="display: flex; justify-content: center;">     
         <div>
         <a target="_blank" class="text-dark" href="{{ author.instagram }}">{{ author.display_name }}</a> | 
-        <span class="post-date"><time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time></span>           
+        <span class="post-date"><time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date:"%Y-%m-%d" }}</time></span>           
         {% if page.last_modified_at %}
         (수정됨: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>)
         {% endif %}
