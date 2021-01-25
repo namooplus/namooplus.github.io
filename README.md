@@ -1,4 +1,4 @@
 # 나무의 노트
 
-## 나무의 노트
-[Github](https://namooplus.github.io/) | [Tistory](https://namooplus.tistory.com/)
+주소 : https://namooplus.github.io/
+참조 : [Memoirs](https://www.wowthemes.net/memoirs-free-jekyll-theme/) / WowThemes.net
