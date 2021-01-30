@@ -5,7 +5,6 @@ author: namoo
 categories: [정보]
 tags: [Android, 공식]
 image: assets/images/post/info-namooprotector-introduction/thumbnail.png
-featured: true
 ---
 
 <center><span style="color:red">* 해당 게시물은 구버전의 나무프로텍터를 소개합니다. *</span></center>
