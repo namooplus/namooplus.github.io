@@ -5,6 +5,7 @@ author: namoo
 categories: [정보]
 tags: [맥, Android]
 image: assets/images/post/info-mac-pushbullet-noti/thumbnail.png
+toc: true
 featured: true
 ---
 
@@ -32,7 +33,7 @@ featured: true
 
 Pushbullet은 플랫폼 간 혹은 기기 간 데이터를 공유하는 서비스입니다. 본래 알림 공유를 목적으로 찾았었는데 안드로이드 알림 공유 외에도 'PC에서 폰 메시지 보내기', '링크 공유', '파일 공유' 등의 서비스도 제공하는 것 같았습니다. 하지만 이 포스팅의 목적은 맥과 안드로이드 간 알림 공유이므로 나머지 기능은 자세히 설명하진 않겠습니다.
 
-<center><img width="90%" src="/assets/images/post/info-mac-pushbullet-noti/1.png"></center>
+<center><img class="image-shadow" width="90%" src="/assets/images/post/info-mac-pushbullet-noti/1.png"></center>
 <center><span style="color:gray; font-size:small;">Pushbullet 사이트</span></center>
 
 [Pushbullet 사이트](https://www.pushbullet.com/)에 접속해보면 Pushbullet은 두 가지 OS (Android, Windows)와 두 가지 브라우저 (Chrome, Firefox)를 지원한다는 것을 확인할 수 있습니다.
