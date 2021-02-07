@@ -1,0 +1,14 @@
+<!-- begin post -->
+{% assign author = site.authors[post.author] %}
+
+<div>
+    <div>
+        <div>
+            <h5>
+                <a class="text-info">{{ post.date | date:"%Y-%m-%d" }}</a> | 
+                <a class="text-dark" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+            </h5>
+        </div>
+    </div>
+</div>
+<!-- end post -->

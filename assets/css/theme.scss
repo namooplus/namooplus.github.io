@@ -237,6 +237,14 @@ img, img:hover {
     grid-template-rows: 1fr;
     grid-gap: 30px;
 }
+.blog-grid-container-one-column {
+    width: auto;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 15px;
+}
 .blog-grid-item {  
     color: #333;
     padding: 0;
