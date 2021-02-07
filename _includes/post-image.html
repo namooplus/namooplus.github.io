@@ -1,0 +1,10 @@
+<p align="center">
+    <img class="image-shadow" width="{{ include.width }}" src="/assets/images/{{ include.src }}" alt="{{ include.caption }}"> 
+    {% if include.src2 and include.width2 %}
+    <img class="image-shadow" width="{{ include.width2 }}" src="/assets/images/{{ include.src2 }}" alt="{{ include.caption }}">
+    {% endif %}
+    {% if include.caption %}
+    <br/>
+    <span style="color:gray; font-size:small;">{{ include.caption }}</span>
+    {% endif %}
+</p>

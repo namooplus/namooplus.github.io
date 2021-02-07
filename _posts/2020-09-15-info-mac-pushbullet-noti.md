@@ -5,15 +5,10 @@ author: namoo
 categories: [정보]
 tags: [맥, Android]
 image: assets/images/post/info-mac-pushbullet-noti/thumbnail.png
-toc: true
 featured: true
 ---
 
----
-
-<center><h3>개요</h3></center>
-
----
+{% include post-index.html text="개요" %}
 
 안녕하세요! **나무**입니다.
 
@@ -23,18 +18,11 @@ featured: true
 
 따라서 이번 포스트에서는 맥과 안드로이드 간의 연속성을 위해 '안드로이드 폰의 알림을 맥에서 받아보자'라는 주제를 준비했습니다. 저의 경우 폰 알림을 무음으로 해놓기 때문에 맥으로 무언가를 작업하고 있으면 중요한 알림을 놓치거나 혹은 알림을 읽더라도 맥에서의 작업 분위기를 깨게 되는 경우가 종종 있었습니다. 때문에 두 플랫폼 간에 서로 알림을 공유받을 수 있으면 어떨까라는 생각을 하고 있었는데 이 케이스에 적합한 프로그램이 바로 **Pushbullet**과 **Noti**입니다. 두 프로그램은 각각의 장단점을 지니고 있는데 우선 Pushbullet부터 살펴봅시다.
 
-<br/>
-
----
-
-<center><h3>Pushbullet이란?</h3></center>
-
----
+{% include post-index.html text="Pushbullet이란?" %}
 
 Pushbullet은 플랫폼 간 혹은 기기 간 데이터를 공유하는 서비스입니다. 본래 알림 공유를 목적으로 찾았었는데 안드로이드 알림 공유 외에도 'PC에서 폰 메시지 보내기', '링크 공유', '파일 공유' 등의 서비스도 제공하는 것 같았습니다. 하지만 이 포스팅의 목적은 맥과 안드로이드 간 알림 공유이므로 나머지 기능은 자세히 설명하진 않겠습니다.
 
-<center><img class="image-shadow" width="90%" src="/assets/images/post/info-mac-pushbullet-noti/1.png"></center>
-<center><span style="color:gray; font-size:small;">Pushbullet 사이트</span></center>
+{% include post-image.html width="90%" src="post/info-mac-pushbullet-noti/1.png" caption="Pushbullet 사이트" %}
 
 [Pushbullet 사이트](https://www.pushbullet.com/)에 접속해보면 Pushbullet은 두 가지 OS (Android, Windows)와 두 가지 브라우저 (Chrome, Firefox)를 지원한다는 것을 확인할 수 있습니다.
 
@@ -48,70 +36,44 @@ Pushbullet은 플랫폼 간 혹은 기기 간 데이터를 공유하는 서비�
 
 그럼 본격적으로 Pushbullet을 설치해보겠습니다.
 
-<br/>
-
----
-
-<center><h3>Pushbullet 설치하기</h3></center>
-
----
+{% include post-index.html text="Pushbullet 설치하기" %}
 
 1. 우선 [Pushbullet 사이트](https://www.pushbullet.com/)에 접속해 계정을 생성해줍니다. 저는 Google 계정을 이용해 진행하였습니다.
 
-<center><img width="90%" src="/assets/images/post/info-mac-pushbullet-noti/2.png"></center>
-<center><span style="color:gray; font-size:small;">Pushbullet 계정 등록</span></center>
+{% include post-image.html width="90%" src="post/info-mac-pushbullet-noti/2.png" caption="Pushbullet 계정 등록" %}
 
+{:start="2"}
 2. 생성을 마치고 해당 계정으로 로그인하면 아래와 같은 화면을 볼 수 있습니다.저는 이미 사용하는 중이라 초기 설정을 마친 상태이지만 처음 시작했다면 순서를 따라 초기 설정을 완료해야합니다.
 
-<center><img width="90%" src="/assets/images/post/info-mac-pushbullet-noti/3.png"></center>
-<center><span style="color:gray; font-size:small;">Pushbullet 초기 설정</span></center>
+{% include post-image.html width="90%" src="post/info-mac-pushbullet-noti/3.png" caption="Pushbullet 초기 설정" %}
 
+{:start="3"}
 3. 초기 설정을 따라 우선 안드로이드 폰에 Pushbullet 앱을 설치합니다.
 
-<p align="center">
-<img width="60%" src="/assets/images/post/info-mac-pushbullet-noti/4.png"> 
-<img width="30%" src="/assets/images/post/info-mac-pushbullet-noti/5.png">
-</p>
-<center><span style="color:gray; font-size:small;">Pushbullet 앱 설치 (Play 스토어)</span></center>
+{% include post-image.html width="56.8%" width2="33.2%" src="post/info-mac-pushbullet-noti/4.png" src2="post/info-mac-pushbullet-noti/5.png" caption="Pushbullet 앱 설치 (Play 스토어)" %}
 
+{:start="4"}
 4. 이어서 맥에도 브라우저 아이콘을 눌러 Chrome 웹스토어 또는 Firefox Addon 스토어를 통해 Pushbullet을 설치해줍니다. 저는 Chrome 웹스토어를 이용해 진행하였습니다.
 
-<p align="center">
-<img width="30%" src="/assets/images/post/info-mac-pushbullet-noti/6.png"> 
-<img width="60%" src="/assets/images/post/info-mac-pushbullet-noti/7.png">
-</p>
-<center><span style="color:gray; font-size:small;">Pushbullet 확장 프로그램 설치 (Chrome 웹 스토어)</span></center>
+{% include post-image.html width="26.5%" width2="63.5%" src="post/info-mac-pushbullet-noti/6.png" src2="post/info-mac-pushbullet-noti/7.png" caption="Pushbullet 확장 프로그램 설치 (Chrome 웹 스토어)" %}
 
+{:start="5"}
 5. 방금 설치한 앱과 확장 프로그램 모두 생성했었던 계정으로 로그인해줍니다.
 
-<p align="center">
-<img width="65%" src="/assets/images/post/info-mac-pushbullet-noti/8.png"> 
-<img width="25%" src="/assets/images/post/info-mac-pushbullet-noti/9.png">
-</p>
-<center><span style="color:gray; font-size:small;">Pushbullet 실행화면 (좌 : 맥 / 우 : 안드로이드)</span></center>
+{% include post-image.html width="67.5%" width2="22.5%" src="post/info-mac-pushbullet-noti/8.png" src2="post/info-mac-pushbullet-noti/9.png" caption="Pushbullet 실행화면 (좌 : 맥 / 우 : 안드로이드)" %}
 
+{:start="6"}
 6. 마지막으로 Pushbullet 앱의 '미러링' 탭에 있는 알림 미러링을 활성화합니다.
 
-<center><img width="40%" src="/assets/images/post/info-mac-pushbullet-noti/10.png"></center>
-<center><span style="color:gray; font-size:small;">Pushbullet 앱</span></center>
+{% include post-image.html width="40%" src="post/info-mac-pushbullet-noti/10.png" caption="Pushbullet 앱" %}
 
-<br/>
-
----
-
-<center><h3>Pushbullet 이용하기</h3></center>
-
----
+{% include post-index.html text="Pushbullet 이용하기" %}
 
 지금까지 Pushbullet을 안드로이드 폰과 맥에 설치해 알림을 받기 위한 준비 과정을 모두 마쳤습니다. 이제 안드로이드 폰의 알림을 맥에서 받을 수 있습니다.
 
 정말 잘 받아지는지 테스트하기 위해 '테스트 알림 보내기'를 눌러볼까요?
 
-<p align="center">
-<img width="25%" src="/assets/images/post/info-mac-pushbullet-noti/11.png"> 
-<img width="65%" src="/assets/images/post/info-mac-pushbullet-noti/12.png">
-</p>
-<center><span style="color:gray; font-size:small;">Pushbullet 테스트 (좌 : 안드로이드 / 우 : 맥)</span></center>
+{% include post-image.html width="24%" width2="66%" src="post/info-mac-pushbullet-noti/11.png" src2="post/info-mac-pushbullet-noti/12.png" caption="Pushbullet 테스트 (좌 : 안드로이드 / 우 : 맥)" %}
 
 다행히 잘 작동하네요!
 
@@ -124,58 +86,34 @@ Pushbullet은 플랫폼 간 혹은 기기 간 데이터를 공유하는 서비�
 
 잠깐! 개요에서 Pushbullet 외에도 Noti라는 프로그램도 있다고 소개했었죠? 바로 Noti를 통해 이를 해결할 수 있습니다.
 
-<br/>
-
----
-
-<center><h3>Noti란?</h3></center>
-
----
+{% include post-index.html text="Noti란?" %}
 
 Noti는 Pushbullet의 문제점을 해결하기 위해 탄생한 맥용 프로그램입니다. 기본적으로 Pushbullet의 계정을 이용하지만 브라우저 플러그인을 사용하지 않기 때문에 Chrome, Firefox와 같은 웹브라우저가 상시 켜져있을 필요가 없습니다. 특히 맥의 native 알림 시스템을 이용하기 때문에 더 깔끔하게 알림을 받을 수 있습니다.
 
-<center><img width="40%" src="/assets/images/post/info-mac-pushbullet-noti/13.png"></center>
-<center><span style="color:gray; font-size:small;">Noti 홈페이지</span></center>
+{% include post-image.html width="90%" src="post/info-mac-pushbullet-noti/13.png" caption="Noti 홈페이지" %}
 
 이 때 Noti는 사이트 소개에 따라 Pushbullet의 알림 기능만 사용할 수 있습니다. 비록 이 프로그램을 이용해서 Pushbullet의 더 다양한 기능을 사용할 수 없다는 것이 아쉽긴 하지만 저희의 목적은 일단 알림 공유이므로 저희의 갈증은 충분히 해소해줄 수 있을 것 같습니다.
 
 그렇다면 다시 처음으로 돌아가서 Noti를 설치해봅시다.
 
-<br/>
-
----
-
-<center><h3>Noti 설치하기</h3></center>
-
----
+{% include post-index.html text="Noti 설치하기" %}
 
 1. 우선 알림 중복을 방지하기 위해 기존에 설치했던 Pushbullet 웹 확장 플러그인은 제거해줍니다. 물론 폰에 설치했던 Pushbullet 앱은 그대로 남겨둡니다.
 
 2. [Noti 사이트](noti.center/)에서 DOWNLOAD (.DMG)를 눌러 개발자의 깃허브에 접속한 후 프로그램을 다운로드받습니다. 포스트 작성일 기준 <span style="color:gray">(2020년 9월 15일)</span>으로 0.3.2이 최신 버전이며 Noti.dmg를 눌러 진행할 수 있습니다.
 
-<center><img width="90%" src="/assets/images/post/info-mac-pushbullet-noti/14.png"></center>
-<center><span style="color:gray; font-size:small;">Noti 다운로드</span></center>
+{% include post-image.html width="90%" src="post/info-mac-pushbullet-noti/14.png" caption="Noti 다운로드" %}
 
+{:start="3"}
 3. 다운로드 받은 Noti를 설치하고 맥 상단바에 뜬 Noti 아이콘을 눌러 기존에 생성했던 Pushbullet 계정으로 로그인합니다.
 
-<center><img width="40%" src="/assets/images/post/info-mac-pushbullet-noti/15.png"></center>
-<center><span style="color:gray; font-size:small;">Noti 아이콘</span></center>
+{% include post-image.html width="40%" src="post/info-mac-pushbullet-noti/15.png" caption="Noti 아이콘" %}
 
-<br/>
-
----
-
-<center><h3>Noti 이용하기</h3></center>
-
----
+{% include post-index.html text="Noti 이용하기" %}
 
 이제 Noti를 이용해 맥에서 폰 알림을 받기 위한 준비 과정을 모두 마쳤습니다. 역시 잘 작동하는지 확인하기 위해 Pushbullet 앱에서 테스트 알림을 보내볼까요?
 
-<p align="center">
-<img width="25%" src="/assets/images/post/info-mac-pushbullet-noti/16.png"> 
-<img width="65%" src="/assets/images/post/info-mac-pushbullet-noti/17.png">
-</p>
-<center><span style="color:gray; font-size:small;">Pushbullet 테스트 (좌 : 안드로이드 / 우 : 맥)</span></center>
+{% include post-image.html width="18.8%" width2="71.2%" src="post/info-mac-pushbullet-noti/16.png" src2="post/info-mac-pushbullet-noti/17.png" caption="Pushbullet 테스트 (좌 : 안드로이드 / 우 : 맥)" %}
 
 마찬가지로 아주 잘 작동하네요!
 
@@ -185,13 +123,7 @@ Noti는 Pushbullet의 문제점을 해결하기 위해 탄생한 맥용 프로�
 1. Pushbullet의 공식 앱이 아니기 때문에 언제 지원이 끊길지 아무도 장담을 못합니다. (github 커밋 기록에 따르면 2018년에서 업데이트가 끊긴 상태입니다. 하지만 일단은 포스트 수정일 <span style="color:gray">(2021년 1월 31일)</span>을 기준으로 macOS Catalina와 Big sur에서는 정상 작동함을 확인하였습니다.)
 2. 맥을 sleep상태에서 다시 깨웠을 때 때때로 Noti서비스가 제대로 켜지지 않을 때가 있습니다. (아마 대부분의 맥북 사용자분들이 맥 전원을 끄지 않고 단순히 덮은 상태로 냅두실텐데 이 경우 다소 불편함이 있을 수 있습니다.)
 
-<br/>
-
----
-
-<center><h3>마치며</h3></center>
-
----
+{% include post-index.html text="마치며" %}
 
 지금까지 맥-안드로이드 간 알림을 공유하는 방법으로 Pushbullet, Noti를 소개하였습니다.
 
