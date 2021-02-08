@@ -1,14 +1,12 @@
 ---
 layout: post
-title:  "[맥][Android] 안드로이드 폰의 알림을 맥에서도 받아보자! (Pushbullet, Noti)"
+title:  "안드로이드 폰의 알림을 맥에서도 받아보자! (Pushbullet, Noti)"
 author: namoo
 categories: [정보]
 tags: [맥, Android]
 image: assets/images/post/info-mac-pushbullet-noti/thumbnail.png
 featured: true
 ---
-
-{% include post-index.html text="개요" %}
 
 안녕하세요! **나무**입니다.
 
@@ -134,5 +132,3 @@ Noti는 Pushbullet의 문제점을 해결하기 위해 탄생한 맥용 프로�
 혹시 맥-안드로이드 사용자이고 그렇지만 연속성을 포기하고 싶지 않다면 이와 같이 알림만이라도 공유해보면 어떨까요?
 
 지금까지 나무였습니다. 다음 게시물에서 봐요!
-
-<br/>

@@ -29,10 +29,37 @@ post_class: post-template
 {% endif %}
 
 <!-- Featured Image -->
-{% include featured-image.html %}
+<!-- {% include featured-image.html %} -->
+
+<!-- Categories and Tags -->
+<div>
+    <p><center><h5>
+        {% assign sortedCategories = page.categories | sort %}
+        {% for category in sortedCategories %}
+        <a class="smoothscroll badge badge-primary text-capitalize" href="{{site.baseurl}}/categories#{{ category | replace: " ","-" }}">{{ category }}</a>        
+        {% endfor %}
+        <span> > </span>
+        {% assign sortedTags = page.tags | sort %}
+        {% for tag in sortedTags %}                
+        <a class="smoothscroll badge badge-primary text-capitalize" href="{{site.baseurl}}/tags#{{ tag | replace: " ","-" }}">{{ tag }}</a>
+        {% endfor %}
+    </h5></center></p>
+</div>
+
+<!--Alert-->
+{% if page.alert %}
+<div>
+    <center><span class="badge badge-danger">{{page.alert}}</span></center>
+</div>
+{% endif %}
+
+<br/>
+<hr/>
 
 <!-- Content -->
+<br/>
 {% include article.html %}
+<br/>
 
 <!-- Rating -->
 {% if page.rating %}
