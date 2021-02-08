@@ -2,7 +2,7 @@
 layout: post
 title:  "안드로이드 폰의 알림을 맥에서도 받아보자! (Pushbullet, Noti)"
 author: namoo
-categories: [정보]
+categories: [정보 노트]
 tags: [맥, Android]
 image: assets/images/post/info-mac-pushbullet-noti/thumbnail.png
 featured: true
