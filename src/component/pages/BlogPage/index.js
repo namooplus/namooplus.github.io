@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { withRouter } from "react-router-dom";
 import queryString from "query-string";
-import PostList from "../../../post/project/list.json";
+import PostList from "../../../post/blog/list.json";
 
-import { 
+import {
     BaseLayout, 
     CategoryLayout, Category, ContentLayout
 } from "./style";
 import PostCard from "../../common/PostCard";
 
-function ProjectPage(props)
+function BlogPage(props)
 {
     // Category
     const category = queryString.parse(props.location.search).category;
@@ -20,7 +20,9 @@ function ProjectPage(props)
         props.setHeaderCollapsed(true);
 
         // Filter posts by category
-        const filteredList = PostList.filter(post => post.category === category);
+        const filteredList = category 
+            ? PostList.filter(post => post.category === category) 
+            : PostList.filter(post => post.recommend === true);
         setFilteredPosts(filteredList);
     }, [category, props]);
 
@@ -31,16 +33,17 @@ function ProjectPage(props)
     return (
         <BaseLayout>
             <CategoryLayout>
-                <Category onClick={() => replaceLink("/project?category=앱")} selected={category === '앱'}>앱</Category>
-                <Category onClick={() => replaceLink("/project?category=웹")} selected={category === '웹'}>웹</Category>
-                <Category onClick={() => replaceLink("/project?category=드로잉")} selected={category === '드로잉'}>드로잉</Category>
+                <Category onClick={() => replaceLink("/blog")} selected={category === undefined}>추천</Category>
+                <Category onClick={() => replaceLink("/blog?category=정보")} selected={category === '정보'}>정보</Category>
+                <Category onClick={() => replaceLink("/blog?category=코딩")} selected={category === '코딩'}>코딩</Category>
+                <Category onClick={() => replaceLink("/blog?category=나무")} selected={category === '나무'}>나무</Category>
             </CategoryLayout>
             <ContentLayout>
                 {filteredPosts.map((post, index) => 
                 <PostCard 
                     key={index}
                     title={post.title}
-                    thumbnail={require(`../../../post/project/${post.id}/thumbnail.png`).default}
+                    thumbnail={require(`../../../post/blog/${post.id}/thumbnail.png`).default}
                     date={post.date}
                     tag={post.tag}
                     onClick={() => pushLink(`/post/${post.id}`)}/>)}
@@ -49,4 +52,4 @@ function ProjectPage(props)
     );
 }
 
-export default withRouter(ProjectPage);
+export default withRouter(BlogPage);

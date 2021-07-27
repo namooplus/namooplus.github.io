@@ -1,13 +1,8 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 function SimpleButton(props)
 {
-    return (
-        props.route 
-            ? (<Link to={props.route}><Button>{props.children}</Button></Link>) 
-            : (<Button onClick={props.onClick}>{props.children}</Button>)
-    );
+    return <Button onClick={props.onClick}>{props.children}</Button>;
 }
 
 export default SimpleButton;
@@ -18,12 +13,12 @@ const Button = styled.button`
     background-color: black;
     color: white;
     font-size: 1rem;
-    transition: background-color 200ms;
+    transition: opacity 200ms;
 
     &:hover {
-        background-color: #555555;
+        opacity: 0.8;
     }
     &:active {
-        background-color: #333333;
+        opacity: 0.6;
     }
 `
