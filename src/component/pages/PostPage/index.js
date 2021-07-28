@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Redirect, withRouter } from "react-router-dom";
 import { useParams } from "react-router";
 
-import { 
+import {
     BaseLayout,
-    ContentLayout, Title, Date, TagLayout, Tag, Divider, Post,
-    MenuLayout
+    ContentLayout, PostLayout, Title, Date, TagLayout, Tag, Divider, Post, MenuLayout,
+    CommentLayout
 } from "./style";
 import FloatingButton from "../../common/FloatingButton";
 import { IoChatboxOutline, IoArrowUpOutline } from "react-icons/io5";
@@ -25,6 +25,8 @@ function PostPage(props)
     const postList = require(`../../../post/${postType}/list.json`);
     const [postInfo, setPostInfo] = useState();
     const [postContent, setPostContent] = useState('');
+
+    const [isCommentOpened, setCommentOpened] = useState(false);
 
     // Initialize page
     useEffect(() => {
@@ -78,34 +80,40 @@ function PostPage(props)
 
     // Click event
     const pushLink = (route) => props.history.push(route);
-    const scrollTop = () => document.getElementById("content").scrollTo({ top: 0, behavior: 'smooth'});
+    const scrollTop = () => document.getElementById("post").scrollTo({ top: 0, behavior: 'smooth'});
+    const toggleComment = () => setCommentOpened(!isCommentOpened);
 
     return (
         postContent !== 'e' ? (
         <BaseLayout>
-            <ContentLayout id="content">
-                <Title>{postInfo?.title}</Title>
-                <Date>{postInfo?.date}</Date>
-                <TagLayout>
-                    <Tag style={{cursor: "pointer"}} onClick={() => pushLink(`/${postType}?category=${postInfo?.category}`)}>
-                        {postInfo?.category}
-                    </Tag>
-                    {">"}
-                    {postInfo?.tag.map((tag, index) => <Tag key={index}>{tag}</Tag>)}
-                </TagLayout>
-                <Divider/>
-                <Post>
-                    <ReactMarkdown
-                        remarkPlugins={[gfm]}
-                        rehypePlugins={[rehypeRaw]}
-                        components={renderOption}
-                        children={postContent}/>
-                </Post>
+            <ContentLayout>
+                <PostLayout id="post">
+                    <Title>{postInfo?.title}</Title>
+                    <Date>{postInfo?.date}</Date>
+                    <TagLayout>
+                        <Tag style={{cursor: "pointer"}} onClick={() => pushLink(`/${postType}?category=${postInfo?.category}`)}>
+                            {postInfo?.category}
+                        </Tag>
+                        {">"}
+                        {postInfo?.tag.map((tag, index) => <Tag key={index}>{tag}</Tag>)}
+                    </TagLayout>
+                    <Divider/>
+                    <Post>
+                        <ReactMarkdown
+                            remarkPlugins={[gfm]}
+                            rehypePlugins={[rehypeRaw]}
+                            components={renderOption}
+                            children={postContent}/>
+                    </Post>
+                </PostLayout>
+                <MenuLayout>
+                    <FloatingButton icon={IoChatboxOutline} onClick={toggleComment}/>
+                    <FloatingButton icon={IoArrowUpOutline} onClick={scrollTop} />
+                </MenuLayout>
             </ContentLayout>
-            <MenuLayout>
-                <FloatingButton icon={IoChatboxOutline}/>
-                <FloatingButton icon={IoArrowUpOutline} onClick={scrollTop} />
-            </MenuLayout>
+            <CommentLayout open={isCommentOpened}>
+                
+            </CommentLayout>
         </BaseLayout>) : <Redirect to="/error"/>
     );
 }

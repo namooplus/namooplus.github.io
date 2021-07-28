@@ -36,8 +36,8 @@ const CardLayout = styled.div`
     }
 `
 const Thumbnail = styled.img`
+    width: 100%;
     aspect-ratio: 1/1;
-    object-fit: cover;
 `
 const DescriptionLayout = styled.div`
     display: flex;

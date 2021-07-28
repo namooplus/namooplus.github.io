@@ -24,6 +24,7 @@
 .quote {
     background-color: white;
     border-bottom: 2px solid rgb(27, 218, 193);
+    margin: 0;
     padding: 10px;
     box-shadow: 0 0 20px lightgray;
     text-align: center;
@@ -74,4 +75,17 @@
 .image-description {
     font-size: 0.8rem;
     color: gray;
+}
+
+@media only screen and (max-width: 925px) { 
+    .subtitle {
+        margin: 10px 0;
+        font-size: 1.5rem;
+    }
+    .paragraph {
+        font-size: 1rem;
+    } 
+    .ordered-list {
+        font-size: 1rem;
+    }
 }

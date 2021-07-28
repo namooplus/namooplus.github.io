@@ -8,18 +8,24 @@ export const BaseLayout = styled.div`
 
 // 내용
 export const ContentLayout = styled.div`
-    display: flex;
+    position: relative;
     flex: 1 0 0;
+    display: flex;
+    flex-flow: column nowrap;
+`
+export const PostLayout = styled.div`
+    flex: 1 0 0;
+    display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    padding: 50px;
+    padding: 50px 50px 100px 50px;
     box-sizing: border-box;
     gap: 10px;
     overflow-x: hidden;
     overflow-y: scroll;
 
     @media only screen and (max-width: 925px) {
-        padding: 30px;
+        padding: 30px 30px 80px 30px;
     }
 `
 export const Title = styled.h1`
@@ -71,8 +77,6 @@ export const Post = styled.div`
         width: 100%;
     }
 `
-
-// 플로팅
 export const MenuLayout = styled.div`
     position: absolute;
     bottom: 0;
@@ -85,4 +89,18 @@ export const MenuLayout = styled.div`
     @media only screen and (max-width: 925px) {
         margin: 30px;
     }
+`
+
+// 댓글
+export const CommentLayout = styled.div`
+    display: flex;
+    flex-flow: column nowrap;
+    height: ${props => props.open ? "300px" : "0"};
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 0 20px lightgray;
+    z-index: 1;
+    overflow: hidden;
+    transition: height ease 300ms;
 `

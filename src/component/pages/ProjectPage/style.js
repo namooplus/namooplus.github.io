@@ -26,7 +26,7 @@ export const Category = styled.button`
     border: none;
     background: none;
     font-size: 1.5rem;
-    font-weight: 800;
+    font-weight: 700;
     color: black;
     opacity: ${props => props.selected ? 1 : 0.2};
     transition: opacity 500ms;
