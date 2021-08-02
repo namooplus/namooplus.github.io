@@ -5,7 +5,7 @@ import { useParams } from "react-router";
 import {
     BaseLayout,
     ContentLayout, PostLayout, Title, Date, TagLayout, Tag, Divider, Post, MenuLayout,
-    CommentLayout
+    CommentLayout, Comment
 } from "./style";
 import FloatingButton from "../../common/FloatingButton";
 import { IoChatboxOutline, IoArrowUpOutline } from "react-icons/io5";
@@ -112,7 +112,13 @@ function PostPage(props)
                 </MenuLayout>
             </ContentLayout>
             <CommentLayout open={isCommentOpened}>
-                
+                <Comment
+                    shortname="https-namooplus-github-io"
+                    config={{
+                        url: "https://namooplus.github.io/post/" + postId,
+                        identifier: postId,
+                        title: postInfo?.title
+                    }}/>
             </CommentLayout>
         </BaseLayout>) : <Redirect to="/error"/>
     );

@@ -1,12 +1,13 @@
 {
   "name": "namoo-note",
   "homepage": "https://namooplus.github.io/",
-  "version": "beta 20210728.2",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "disqus-react": "^1.1.1",
     "gh-pages": "^3.2.3",
     "query-string": "^4.3.4",
     "react": "^17.0.2",

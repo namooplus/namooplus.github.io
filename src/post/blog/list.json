@@ -6,13 +6,5 @@
         "category": "정보",
         "tag": ["맥", "Android"],
         "recommend": true
-    },
-    {
-        "id": "2021-07-12-test-post",
-        "title": "테스트 게시물입니다",
-        "date": "2021-07-12",
-        "category": "코딩",
-        "tag": ["Test"],
-        "recommend": false
     }
 ]

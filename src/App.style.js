@@ -3,12 +3,14 @@ import styled, { keyframes } from "styled-components";
 export const Container = styled.div`
     display: flex;
     flex-flow: row nowrap;
-    height: 100vh;
+    height: 100%;
 
     @media only screen and (max-width: 925px) {
         flex-flow: column nowrap;
     }
 `
+
+// 헤더
 export const Header = styled.div`
     position: relative;
     display: flex;
@@ -97,6 +99,12 @@ export const MenuLayout = styled.div`
     gap: 20px;
     opacity: ${props => props.collapse ? 1 : 0};
     transition: opacity ease 500ms;
+`
+
+// 내용
+export const ContentLayout = styled.div`
+    flex: 1 0 0;
+    overflow: hidden;
 `
 
 // 오버레이

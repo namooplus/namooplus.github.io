@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const BaseLayout = styled.div`
-    flex: 1 0 0;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;

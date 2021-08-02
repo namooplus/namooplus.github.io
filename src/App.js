@@ -10,6 +10,7 @@ import ErrorPage from "./component/pages/ErrorPage/index";
 import {
   Container, 
   Header, Greeting, Title1, Title2, MenuLayout,
+  ContentLayout,
   Pencil
 } from "./App.style";
 import IconButton from "./component/common/IconButton";
@@ -35,14 +36,16 @@ function App()
           </MenuLayout>
         </Header>
         {/* 내용 */}
-        <Switch>
-          <Route exact path="/" component={() => <IntroPage setHeaderCollapsed={handleCollapse}/>}/>
-          <Route exact path="/blog" component={() => <BlogPage setHeaderCollapsed={handleCollapse}/>}/>
-          <Route exact path="/project" component={() => <ProjectPage setHeaderCollapsed={handleCollapse}/>}/>
-          <Route exact path="/post/:postId" component={() => <PostPage setHeaderCollapsed={handleCollapse}/>}/>
-          <Route exact path="/error" component={() => <ErrorPage setHeaderCollapsed={handleCollapse}/>}/>
-          <Route component={() => <Redirect to="/error"/>}/>
-        </Switch>
+        <ContentLayout>
+          <Switch>
+            <Route exact path="/" component={() => <IntroPage setHeaderCollapsed={handleCollapse}/>}/>
+            <Route exact path="/blog" component={() => <BlogPage setHeaderCollapsed={handleCollapse}/>}/>
+            <Route exact path="/project" component={() => <ProjectPage setHeaderCollapsed={handleCollapse}/>}/>
+            <Route exact path="/post/:postId" component={() => <PostPage setHeaderCollapsed={handleCollapse}/>}/>
+            <Route exact path="/error" component={() => <ErrorPage setHeaderCollapsed={handleCollapse}/>}/>
+            <Route component={() => <Redirect to="/error"/>}/>
+          </Switch>
+        </ContentLayout>
         {/* 오버레이 */}
         <Pencil src={PencilIcon} collapse={isHeaderCollapsed}/>
       </Container>
