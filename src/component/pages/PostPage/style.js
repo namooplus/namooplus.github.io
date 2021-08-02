@@ -108,6 +108,10 @@ export const CommentLayout = styled.div`
 export const Comment = styled(DiscussionEmbed)`
     margin: 30px 50px;
 
+    & iframe:not(iframe[src*="comments"]){
+        display: none;
+    }
+
     @media only screen and (max-width: 925px) {
         margin: 30px;
     }

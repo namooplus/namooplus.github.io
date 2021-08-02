@@ -60,6 +60,7 @@ export const Title1 = styled.h1`
     line-height: ${props => props.collapse ? '3rem' : '5rem'};
     color: white;
     white-space: nowrap;
+    -webkit-transition: all ease 500ms;
     transition: all ease 500ms;
     pointer-events: none;
 
@@ -151,6 +152,7 @@ export const Pencil = styled.img`
     width: 23px;
     filter: drop-shadow(0 0 20px black);
     opacity: ${props => props.collapse ? 0 : 1};
+    -webkit-transition: opacity 500ms, left ease 500ms, top ease 500ms;
     transition: opacity 500ms, left ease 500ms, top ease 500ms;
     animation: ${pencilAnimation} 1300ms 0s 1 ease forwards;
     pointer-events: none;

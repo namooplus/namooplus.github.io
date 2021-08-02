@@ -43,6 +43,11 @@ function PostPage(props)
             fetch(md).then(res => res.text()).then(content => setPostContent(content));
         }
         catch(e) { setPostContent('e'); }
+
+        return () => { 
+            setPostInfo();
+            setPostContent('')
+        };
     }, [props, postId, postType, postList]);
 
     // MD rendering option
