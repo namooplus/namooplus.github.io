@@ -17,13 +17,13 @@ const Button = styled.button`
     border: none;
     border-radius: 50%;
     background-color: white;
-    box-shadow: 0 0 20px lightgray;
+    box-shadow: 0 10px 10px lightgray;
     color: black;
     padding: calc(25px - 0.7rem);
     transition: background-color 200ms, box-shadow 200ms;
 
     &:hover {
-        box-shadow: 0 0 40px gray;
+        box-shadow: 0 20px 20px lightgray;
     }
     &:active {
         background-color: #EEEEEE;

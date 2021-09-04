@@ -1,118 +1,97 @@
 import styled from "styled-components";
-import { DiscussionEmbed } from 'disqus-react';
 
-export const BaseLayout = styled.div`
+export const BaseContainer = styled.div`
+    display: flex;
     width: 100%;
-    height: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-`
-
-// 내용
-export const ContentLayout = styled.div`
-    position: relative;
-    flex: 1 0 0;
-    display: flex;
-    flex-flow: column nowrap;
-`
-export const PostLayout = styled.div`
-    flex: 1 0 0;
-    display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    padding: 50px 50px 100px 50px;
-    box-sizing: border-box;
-    gap: 10px;
-    overflow-x: hidden;
-    overflow-y: scroll;
+`
 
-    @media only screen and (max-width: 925px) {
-        padding: 30px 30px 80px 30px;
-    }
+export const SubHeaderContainer = styled.div`
+    position: sticky;
+    top: 0;
+    display: flex;
+    width: 100%;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 110px 30px 30px 30px;
+    box-sizing: border-box;
+    z-index: 30;
+    overflow-y: hidden;
+    background-color: #EEEEEEAA;
+    backdrop-filter: blur(10px);
 `
 export const Title = styled.h1`
     margin: 0;
-    color: black;
-    font-size: 2.5rem;
     text-align: center;
-
-    @media only screen and (max-width: 925px) {
-        font-size: 2rem;
-    }
+    font-size: ${props => props.collapse ? "1rem" : "2rem"};
+    color: black;
+    transition: font-size ease .5s;
+`
+export const InfoContainer = styled.div`
+    display: flex;
+    height: ${props => props.collapse ? "0" : "calc(1.7rem + 25px)"};
+    flex-flow: column nowrap;
+    align-items: center;
+    overflow: hidden;
+    transition: height ease .5s;
 `
 export const Date = styled.h2`
-    margin: 0;
-    color: gray;
-    font-size: 1.3rem;
+    height: 1rem;
+    margin: 3px 0 0 0;
+    font-size: 1rem;
     font-weight: 300;
-
-    @media only screen and (max-width: 925px) {
-        font-size: 1.1rem;
-    }
+    color: gray;
 `
 export const TagLayout = styled.div`
     display: flex;
     flex-flow: row nowrap;
     gap: 7px;
-    margin-top: 5px;
+    margin-top: 12px;
 `
 export const Tag = styled.span`
     padding: 5px 7px;
     background: #21D1C2;
-    color: white;
+    line-height: 0.7rem;
     font-size: 0.7rem;
+    color: white;
 `
-export const Divider = styled.hr`
-    width: 100%;
-    margin-top: 35px;
-    border: 1px solid lightgray;
-    transform: scaleY(0.5);
 
-    @media only screen and (max-width: 925px) {
-        margin-top: 20px;
-    }
-`
-export const Post = styled.div`
-    width: 700px;
+export const PostContainer = styled.div`
+    display: flex;
+    width: 768px;
+    flex-flow: column nowrap;
+    padding: 0 30px 110px 30px;
+    box-sizing: border-box;
 
-    @media only screen and (max-width: 1050px) {
+    @media only screen and (max-width: 768px) {
         width: 100%;
     }
 `
-export const MenuLayout = styled.div`
-    position: absolute;
-    bottom: 0;
-    right: 0;
+
+export const MenuContainer = styled.div`
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
     display: flex;
     flex-flow: row nowrap;
-    margin: 50px;
     gap: 20px;
-
-    @media only screen and (max-width: 925px) {
-        margin: 30px;
-    }
+    z-index: 40;
 `
 
-// 댓글
-export const CommentLayout = styled.div`
+export const CommentContainer = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
+    width: 100%;
+    height: 100%;
     flex-flow: column nowrap;
-    height: ${props => props.open ? "300px" : "0"};
-    background-color: white;
-    box-shadow: 0 0 20px lightgray;
-    box-sizing: border-box;
-    z-index: 1;
+    z-index: 35;
     overflow: scroll;
-    transition: height ease 300ms;
-`
-export const Comment = styled(DiscussionEmbed)`
-    margin: 30px 50px;
-
-    & iframe:not(iframe[src*="comments"]){
-        display: none;
-    }
-
-    @media only screen and (max-width: 925px) {
-        margin: 30px;
-    }
+    background-color: #EEEEEEAA;
+    backdrop-filter: blur(7px);
+    opacity: ${props => props.open ? 1 : 0};
+    pointer-events: ${props => props.open ? "auto" : "none"};
+    transition: opacity .3s;
 `

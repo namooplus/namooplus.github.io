@@ -21,11 +21,11 @@ const CardLayout = styled.div`
     width: 300px;
     flex-flow: column nowrap;
     background-color: white;
-    box-shadow: 0 0 10px lightgray;
-    transition: box-shadow 500ms, opacity 500ms;
+    box-shadow: 0 10px 10px #DDDDDD;
+    transition: box-shadow .3s, opacity .3s;
 
     &:hover {
-        box-shadow: 0 0 30px gray;
+        box-shadow: 0 30px 30px #BBBBBB;
     }
     &:active {
         opacity: 0.5;

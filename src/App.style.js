@@ -1,167 +1,65 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-export const Container = styled.div`
+export const BaseContainer = styled.div`
     display: flex;
     flex-flow: row nowrap;
-    height: 100%;
-
-    @media only screen and (max-width: 925px) {
-        flex-flow: column nowrap;
-    }
+    min-height: 100vh;
 `
 
-// 헤더
-export const Header = styled.div`
-    position: relative;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: ${props => props.collapse ? '250px' : '50%'};
-    padding: 50px;
-    box-sizing: border-box;
-    background-color: #21D1C2;
-    overflow: hidden;
-    transition: width ease 500ms, height ease 500ms;
-
-    @media only screen and (max-width: 925px) {
-        width: unset;
-        height: ${props => props.collapse ? '120px' : '50%'};
-        padding: 30px;
-    }
-`
-export const Greeting = styled.h1`
-    position: absolute;
-    margin: 0;
-    font-size: 4rem;
-    font-weight: 600;
-    letter-spacing: 1rem;
-    line-height: 5rem;
-    color: white;
-    white-space: nowrap;
-    opacity: ${props => props.collapse ? 0 : 1};
-    transition: opacity ease 500ms;
-    pointer-events: none;
-
-    @media only screen and (max-width: 925px) {
-        font-size: 3rem;
-        letter-spacing: 0.6rem;
-        line-height: 4rem;
-    }
-`
-export const Title1 = styled.h1`
-    position: absolute;
-    margin: 0;
-    top: ${props => props.collapse ? 'calc(50% - 3rem)' : 'calc(50px + 10rem)'};
-    left: ${props => props.collapse ? 'calc((250px - 5rem) / 2)' : '50px'};
-    font-size: ${props => props.collapse ? '2rem' : '4rem'};
-    font-weight: ${props => props.collapse ? '400' : '600'};
-    letter-spacing: 1rem;
-    line-height: ${props => props.collapse ? '3rem' : '5rem'};
-    color: white;
-    white-space: nowrap;
-    -webkit-transition: all ease 500ms;
-    transition: all ease 500ms;
-    pointer-events: none;
-
-    @media only screen and (max-width: 925px) {
-        top: ${props => props.collapse ? 'calc(50% - 2rem)' : 'calc(30px + 8rem)'};
-        left: ${props => props.collapse ? 'calc((100% - 3.6rem) / 2)' : '30px'};
-        font-size: ${props => props.collapse ? '1.5rem' : '3rem'};
-        letter-spacing: 0.6rem;
-        line-height: ${props => props.collapse ? '2rem' : '4rem'};
-    }
-`
-export const Title2 = styled.h1`
-    position: absolute;
-    margin: 0;
-    top: 50%;
-    left: calc((250px - 5rem) / 2);
-    font-size: 2rem;
-    font-weight: 400;
-    letter-spacing: 1rem;
-    line-height: 3rem;
-    color: white;
-    white-space: nowrap;
-    opacity: ${props => props.collapse ? 1 : 0};
-    transition: opacity ease 500ms;
-    pointer-events: none;
-
-    @media only screen and (max-width: 925px) {
-        left: calc((100% - 3.6rem) / 2);
-        font-size: 1.5rem;
-        letter-spacing: 0.6rem;
-        line-height: 2rem;
-    }
-`
-export const MenuLayout = styled.div`
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 20px;
-    opacity: ${props => props.collapse ? 1 : 0};
-    transition: opacity ease 500ms;
-`
-
-// 내용
-export const ContentLayout = styled.div`
-    flex: 1 0 0;
-    overflow: hidden;
-`
-
-// 오버레이
-const pencilAnimation = keyframes`
-    0% {
-        top: 100%;
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    50% {
-        top: 50%;
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    60% {
-        top: 50%;
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    100% {
-        top: 50%;
-        transform: translate(-50%, -50%) rotate(30deg);
-    }
-`
-const pencilAnimationMobile = keyframes`
-    0% {
-        left: 0%;
-        transform: translate(-50%, -50%) rotate(90deg);
-    }
-    50% {
-        left: 50%;
-        transform: translate(-50%, -50%) rotate(90deg);
-    }
-    60% {
-        left: 50%;
-        transform: translate(-50%, -50%) rotate(90deg);
-    }
-    100% {
-        left: 50%;
-        transform: translate(-50%, -50%) rotate(60deg);
-    }
-`
-export const Pencil = styled.img`
+export const HeaderContainer = styled.div`
     position: fixed;
-    left: ${props => props.collapse ? '250px' : '50%'};
-    height: 460px;
-    width: 23px;
-    filter: drop-shadow(0 0 20px black);
-    opacity: ${props => props.collapse ? 0 : 1};
-    -webkit-transition: opacity 500ms, left ease 500ms, top ease 500ms;
-    transition: opacity 500ms, left ease 500ms, top ease 500ms;
-    animation: ${pencilAnimation} 1300ms 0s 1 ease forwards;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-flow: column nowrap;
+    align-items: center;
     pointer-events: none;
+    z-index: 50;
+`
+export const HeaderBackground = styled.div`
+    width: 100%;
+    height: 100%;
+    background-color: #EEEEEEAA;
+    backdrop-filter: blur(7px);
+    opacity: ${props => props.collapsed ? 0 : 1};
+    pointer-events: ${props => props.collapsed ? "none" : "auto"};
+    transition: .5s opacity;
+`
+export const NavigationContainer = styled.div`
+    position: absolute;
+    top: ${props => props.collapsed ? "30px" : "calc((100% - (220px + 4.5rem)) / 2)"};
+    display: flex;
+    height: ${props => props.collapsed ? "70px" : "calc(220px + 4.5rem)"};
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 50px;
+    pointer-events: auto;
+    overflow: hidden;
+    transition: .5s ease all;
+`
+export const Icon = styled.img`
+    width: 70px;
+    height: 70px;
+    transition: .3s opacity;
 
-    @media only screen and (max-width: 925px) {
-        left: unset;
-        top: ${props => props.collapse ? '120px' : '50%'};
-        height: 340px;
-        width: 17px;
-        animation: ${pencilAnimationMobile} 1300ms 0s 1 ease forwards;
+    &:hover {
+        opacity: 0.5;
+    }
+`
+export const Navigation = styled(Link)`
+    height: 1.5rem;
+    pointer-events: ${props => props.selected ? "none" : "auto"};
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: black;
+    opacity: ${props => props.selected ? 1 : 0.3};
+    transition: .3s opacity;
+
+    &:hover {
+        opacity: 1;
     }
 `

@@ -8,17 +8,18 @@ function SimpleButton(props)
 export default SimpleButton;
 
 const Button = styled.button`
-    border: none;
     padding: 10px 15px;
+    border: none;
     background-color: black;
+    box-shadow: 0 10px 10px #DDDDDD;
     color: white;
     font-size: 1rem;
-    transition: opacity 200ms;
+    transition: box-shadow .3s, opacity .3s;
 
     &:hover {
-        opacity: 0.8;
+        box-shadow: 0 20px 20px #BBBBBB;
     }
     &:active {
-        opacity: 0.6;
+        opacity: 0.5;
     }
 `

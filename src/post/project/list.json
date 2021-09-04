@@ -4,7 +4,8 @@
         "title": "나무프로텍터",
         "date": "2016-현재",
         "category": "앱",
-        "tag": ["Android", "Kotlin"]
+        "tag": ["Android", "Kotlin"],
+        "recommend": true
     },
     {
         "id": "app-hange",
@@ -25,6 +26,7 @@
         "title": "나무의 노트",
         "date": "2021-현재",
         "category": "웹",
-        "tag": ["React"]
+        "tag": ["React"],
+        "recommend": true
     }
 ]

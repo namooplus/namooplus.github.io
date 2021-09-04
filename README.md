@@ -1,7 +1,7 @@
 # 나무의 노트
 
 ## 버전
-1.0.1
+2.0.0
 
 ## 주소
-https://namooplus.github.io/
+https://namoo.dev/

@@ -1,55 +1,32 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Switch, Route, Redirect, Link } from "react-router-dom";
+import { Switch, Route, Redirect, useLocation } from "react-router-dom";
 
 import IntroPage from "./component/pages/IntroPage/index";
-import BlogPage from "./component/pages/BlogPage/index";
-import ProjectPage from "./component/pages/ProjectPage/index";
+import ListPage from "./component/pages/ListPage/index";
 import PostPage from "./component/pages/PostPage/index";
 import ErrorPage from "./component/pages/ErrorPage/index";
 
-import {
-  Container, 
-  Header, Greeting, Title1, Title2, MenuLayout,
-  ContentLayout,
-  Pencil
-} from "./App.style";
-import IconButton from "./component/common/IconButton";
-import PencilIcon from "./image/pencil.PNG";
-import { BsChevronLeft } from "react-icons/bs";
+import { Container, Group } from "./App.component";
 
 function App() 
 {
-  // Header sizing
-  const [isHeaderCollapsed, setHeaderCollapsed] = useState(false);
-  const handleCollapse = (state) => setHeaderCollapsed(state);
+  const [isHeaderCollapsed, setHeaderCollapsed] = useState(true);
+  const currentLocation = useLocation();
 
   return (
-    <Router>
-      <Container>
-        {/* 헤더 */}
-        <Header collapse={isHeaderCollapsed}>
-          <Greeting collapse={isHeaderCollapsed}>안녕하세요!<br/>저는<br/>ㅤㅤ입니다.</Greeting>
-          <Title1 collapse={isHeaderCollapsed}>나무</Title1>
-          <Title2 collapse={isHeaderCollapsed}>노트</Title2>
-          <MenuLayout collapse={isHeaderCollapsed}>
-            <Link to="/"><IconButton icon={BsChevronLeft} size="1.7rem" color="white"/></Link>
-          </MenuLayout>
-        </Header>
-        {/* 내용 */}
-        <ContentLayout>
-          <Switch>
-            <Route exact path="/" component={() => <IntroPage setHeaderCollapsed={handleCollapse}/>}/>
-            <Route exact path="/blog" component={() => <BlogPage setHeaderCollapsed={handleCollapse}/>}/>
-            <Route exact path="/project" component={() => <ProjectPage setHeaderCollapsed={handleCollapse}/>}/>
-            <Route exact path="/post/:postId" component={() => <PostPage setHeaderCollapsed={handleCollapse}/>}/>
-            <Route exact path="/error" component={() => <ErrorPage setHeaderCollapsed={handleCollapse}/>}/>
-            <Route component={() => <Redirect to="/error"/>}/>
-          </Switch>
-        </ContentLayout>
-        {/* 오버레이 */}
-        <Pencil src={PencilIcon} collapse={isHeaderCollapsed}/>
-      </Container>
-    </Router>
+    <Container.Base>
+      {/* 헤더 */}
+      <Group.Header collapsed={isHeaderCollapsed} setCollapsed={setHeaderCollapsed} currentPath={currentLocation.pathname}/>
+      {/* 내용 */}
+      <Switch>
+        <Route exact path="/" component={IntroPage}/>
+        <Route exact path="/blog" component={() => <ListPage type="blog"/>}/>
+        <Route exact path="/project" component={() => <ListPage type="project"/>}/>
+        <Route exact path="/post/:postId" component={PostPage}/>
+        <Route exact path="/error" component={ErrorPage}/>
+        <Route component={() => <Redirect to="/error"/>}/>
+      </Switch>
+    </Container.Base>
   );
 }
 
