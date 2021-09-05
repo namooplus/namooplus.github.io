@@ -34,10 +34,6 @@ export const HeaderBackground = styled.div`
     pointer-events: ${props => props.collapsed ? "none" : "auto"};
     transition: .5s opacity;
 `
-export const Copyright = styled.span`
-    font-size: 0.8rem;
-    color: gray;
-`
 
 export const NavigationContainer = styled.div`
     position: absolute;
@@ -45,7 +41,7 @@ export const NavigationContainer = styled.div`
     height: ${props => props.collapsed ? "60px" : "calc(210px + 4.5rem)"};
     flex-flow: column nowrap;
     align-items: center;
-    margin-top: ${props => props.collapsed ? "15px" : "calc((100vh - (210px + 4.5rem)) / 2)"};
+    margin-top: ${props => props.collapsed ? "15px" : "60px"};
     gap: 50px;
     pointer-events: auto;
     overflow: hidden;
@@ -73,4 +69,14 @@ export const Navigation = styled(Link)`
     &:hover {
         opacity: 1;
     }
+`
+
+export const Copyright = styled.span`
+    position: fixed;
+    bottom: 30px;
+    font-size: 0.8rem;
+    color: gray;
+    opacity: ${props => props.collapsed ? 0 : 1};
+    pointer-events: ${props => props.collapsed ? "none" : "auto"};
+    transition: .5s opacity;
 `

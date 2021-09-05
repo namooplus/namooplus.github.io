@@ -51,20 +51,19 @@ export const Group = {
             </PostContainer>
         )
     },
-    Menu: function(props) {
-        return (
-            <MenuContainer>
-                <FloatingButton icon={IoChatboxOutline} onClick={props.toggleComment}/>
-                <FloatingButton icon={IoArrowUpOutline} onClick={props.scrollTop} />
-            </MenuContainer>
-        )
-    },
     Comment: function(props) {
         return (
-            <CommentContainer open={props.open}>
+            <CommentContainer>
                 <CommentTitle>댓글</CommentTitle>
                 <Comments/>
             </CommentContainer>
+        )
+    },
+    Menu: function(props) {
+        return (
+            <MenuContainer>
+                <FloatingButton icon={IoArrowUpOutline} onClick={props.scrollTop} />
+            </MenuContainer>
         )
     },
 };

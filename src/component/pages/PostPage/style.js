@@ -62,7 +62,7 @@ export const PostContainer = styled.div`
     display: flex;
     width: 768px;
     flex-flow: column nowrap;
-    padding: 30px 30px 110px 30px;
+    padding: 30px;
     box-sizing: border-box;
 
     @media only screen and (max-width: 768px) {
@@ -81,26 +81,17 @@ export const MenuContainer = styled.div`
 `
 
 export const CommentContainer = styled.div`
-    position: fixed;
-    top: 0;
-    left: 0;
     display: flex;
     width: 100%;
-    height: 100%;
     flex-flow: column nowrap;
-    z-index: 35;
-    padding: 90px 30px 110px 30px;
+    align-items: center;
+    padding: 30px 0 80px 0;
     box-sizing: border-box;
-    overflow: scroll;
-    background-color: #EEEEEEAA;
-    backdrop-filter: blur(7px);
-    opacity: ${props => props.open ? 1 : 0};
-    pointer-events: ${props => props.open ? "auto" : "none"};
-    transition: opacity .3s;
+    border-top: 1px solid #00000010;
 `
 export const CommentTitle = styled.h1`
     margin: 0;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: black;
 `

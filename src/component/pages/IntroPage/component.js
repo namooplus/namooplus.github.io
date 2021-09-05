@@ -1,5 +1,6 @@
 import { 
     BaseContainer, 
+    Boundary,
     Title, Pencil,
     SectionContainer, Subtitle, Description, ButtonContainer
 } from "./style";
@@ -61,6 +62,9 @@ export const Group = {
 };
 
 export const Element = {
+    Boundary: function(props) {
+        return <Boundary/>
+    },
     Title: function(props) {
         return <Title>안녕하세요!<br/>저는 나무입니다.</Title>
     },

@@ -10,6 +10,17 @@ export const BaseContainer = styled.div`
     gap: 80px;
 `
 
+export const Boundary = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    z-index: 30;
+    background-color: #EEEEEEAA;
+    backdrop-filter: blur(10px);
+`
+
 export const Title = styled.h1`
     margin: 50px 0;
     text-align: center;

@@ -21,19 +21,15 @@ function PostPage(props)
         else if (scrollDirection === 'DOWN') setCollapse(true);
     }, [scrollDirection]);
 
-    // 댓글 이벤트
-    const [isCommentOpen, setCommentOpen] = useState(false);
-
     // 클릭 이벤트
-    const toggleComment = () => setCommentOpen(!isCommentOpen);
     const scrollTop = () => window.scrollTo({ top: 0, behavior: 'smooth'});
 
     return (
         <Container.Base postContent={postContent}>
             <Group.SubHeader postInfo={postInfo} collapse={collapse}/>
             <Group.Post id={postId} type={postType} content={postContent}/>
-            <Group.Menu toggleComment={toggleComment} scrollTop={scrollTop}/>
-            <Group.Comment open={isCommentOpen}/>
+            <Group.Comment/>
+            <Group.Menu scrollTop={scrollTop}/>
         </Container.Base>
     );
 }

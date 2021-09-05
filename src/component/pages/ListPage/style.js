@@ -80,5 +80,6 @@ export const PostContainer = styled.div`
 
     @media only screen and (max-width: 925px) {
         width: 100%;
+        padding: 15px 15px 30px 15px;
     }
 `

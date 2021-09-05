@@ -41,7 +41,8 @@ const Thumbnail = styled.img`
     aspect-ratio: 1/1;
 
     @media only screen and (max-width: 675px) {
-        width: calc(2.5rem + 64px);
+        width: calc(2.5rem + 54px);
+        height: calc(2.5rem + 54px);
     }
 `
 const DescriptionLayout = styled.div`
@@ -52,6 +53,10 @@ const DescriptionLayout = styled.div`
     gap: 7px;
     background-color: white;
     overflow: hidden;
+
+    @media only screen and (max-width: 675px) {
+        padding: 15px;
+    }
 `
 const Title = styled.h3`
     margin: 0;

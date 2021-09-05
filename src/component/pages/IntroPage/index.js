@@ -7,6 +7,7 @@ function IntroPage(props)
 {
     return (
         <Container.Base>
+            <Element.Boundary/>
             <Element.Title/>
             <Element.Pencil/>
             <Group.Overview/>
