@@ -5,28 +5,45 @@ export const BaseContainer = styled.div`
     width: 100%;
     flex-flow: column nowrap;
     align-items: center;
-    padding: 130px 30px 60px 30px;
+    padding: 150px 30px 60px 30px;
     box-sizing: border-box;
     gap: 80px;
+`
+
+export const Title = styled.h1`
+    margin: 50px 0;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    color: black;
+    background: linear-gradient(to bottom, #21D167 0%, #21D1C2 100%);
+    background-clip: unset;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+`
+export const Pencil = styled.img`
+    width: 20px;
+    height: 400px;
 `
 
 export const SectionContainer = styled.div`
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    gap: 30px;
+    gap: 15px;
 `
-export const Title = styled.h1`
+export const Subtitle = styled.h2`
     margin: 0;
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 600;
     color: black;
 `
-export const Introduction = styled.p`
+export const Description = styled.p`
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: black;
+    text-align: center;
 `
 export const ButtonContainer = styled.div`
     display: flex;

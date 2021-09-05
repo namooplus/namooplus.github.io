@@ -6,7 +6,7 @@ export const BaseContainer = styled.div`
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    padding : 130px 30px 30px 30px;
+    padding : 90px 30px 30px 30px;
     gap: 20px;
 `
 

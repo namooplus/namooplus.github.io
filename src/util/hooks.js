@@ -60,20 +60,25 @@ export function usePost(postId, postType, postList) {
 
     return { postInfo, postContent };
 }
-export function useScrollDown() {
-    const [scrollDown, setScrollDown] = useState(0);
-    let isRecordAllowed = true;
-    let prevScrollY = window.scrollY;
+export function useScrollDirection() {
+    const [scrollDirection, setScrollDirection] = useState('NONE');
 
-    const allowRecord = () => {
-        prevScrollY = window.scrollY;
-        isRecordAllowed = true;
-    };
+    let throttler;
+    let prevScrollRemain = document.body.scrollHeight - window.scrollY;
+    const SCROLL_BUFFER = 100;
+
     const handleScroll = () => {
-        if (!isRecordAllowed) return;
-        isRecordAllowed = false;
-        setTimeout(allowRecord, 600);
-        setScrollDown(prevScrollY < window.scrollY);
+        if (throttler) return;
+        throttler = setTimeout(() => {
+            let scrollRemain = document.body.scrollHeight - window.scrollY;
+
+            if (prevScrollRemain + SCROLL_BUFFER < scrollRemain || window.scrollY === 0) setScrollDirection('UP');
+            else if (prevScrollRemain > scrollRemain) setScrollDirection('DOWN');
+            else setScrollDirection('NONE');
+
+            prevScrollRemain = scrollRemain;
+            throttler = null;
+        }, 100);
     }
     
     useEffect(() => {
@@ -81,5 +86,5 @@ export function useScrollDown() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    return scrollDown;
+    return scrollDirection;
 }

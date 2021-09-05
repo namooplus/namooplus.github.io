@@ -14,19 +14,20 @@ export const SubHeaderContainer = styled.div`
     width: 100%;
     flex-flow: column nowrap;
     align-items: center;
-    padding: 110px 30px 30px 30px;
+    padding: 90px 30px 20px 30px;
     box-sizing: border-box;
     z-index: 30;
     overflow-y: hidden;
     background-color: #EEEEEEAA;
     backdrop-filter: blur(10px);
+    border-bottom: 1px solid #00000010;
 `
 export const Title = styled.h1`
     margin: 0;
     text-align: center;
     font-size: ${props => props.collapse ? "1rem" : "2rem"};
     color: black;
-    transition: font-size ease .5s;
+    transition: font-size ease .3s;
 `
 export const InfoContainer = styled.div`
     display: flex;
@@ -34,7 +35,7 @@ export const InfoContainer = styled.div`
     flex-flow: column nowrap;
     align-items: center;
     overflow: hidden;
-    transition: height ease .5s;
+    transition: height ease .3s;
 `
 export const Date = styled.h2`
     height: 1rem;
@@ -61,7 +62,7 @@ export const PostContainer = styled.div`
     display: flex;
     width: 768px;
     flex-flow: column nowrap;
-    padding: 0 30px 110px 30px;
+    padding: 30px 30px 110px 30px;
     box-sizing: border-box;
 
     @media only screen and (max-width: 768px) {
@@ -88,10 +89,18 @@ export const CommentContainer = styled.div`
     height: 100%;
     flex-flow: column nowrap;
     z-index: 35;
+    padding: 90px 30px 110px 30px;
+    box-sizing: border-box;
     overflow: scroll;
     background-color: #EEEEEEAA;
     backdrop-filter: blur(7px);
     opacity: ${props => props.open ? 1 : 0};
     pointer-events: ${props => props.open ? "auto" : "none"};
     transition: opacity .3s;
+`
+export const CommentTitle = styled.h1`
+    margin: 0;
+    text-align: center;
+    font-size: 2rem;
+    color: black;
 `

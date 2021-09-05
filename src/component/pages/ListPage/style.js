@@ -15,7 +15,7 @@ export const SubHeaderContainer = styled.div`
     width: 100%;
     flex-flow: column nowrap;
     align-items: center;
-    padding: 110px 0 30px 0;
+    padding: 90px 0 15px 0;
     gap: 10px;
     z-index: 30;
     background-color: #EEEEEEAA;
@@ -32,7 +32,7 @@ export const Category = styled.button`
     padding: 0;
     border: none;
     background: none;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: black;
     opacity: ${props => props.selected ? 1 : 0.2};
@@ -48,7 +48,7 @@ export const TagContainer = styled.div`
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 10px;
     overflow-x: scroll;
     border-radius: 30px;
     background-color: #21D1C2;
@@ -74,7 +74,7 @@ export const PostContainer = styled.div`
     flex-flow: row wrap;
     justify-content: center;
     align-content: flex-start;
-    padding: 0 30px 60px 30px;
+    padding: 15px 30px 60px 30px;
     box-sizing: border-box;
     gap: 15px;
 

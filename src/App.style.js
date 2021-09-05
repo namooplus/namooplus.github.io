@@ -20,29 +20,40 @@ export const HeaderContainer = styled.div`
     z-index: 50;
 `
 export const HeaderBackground = styled.div`
+    display: flex;
     width: 100%;
     height: 100%;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px;
+    box-sizing: border-box;
     background-color: #EEEEEEAA;
     backdrop-filter: blur(7px);
     opacity: ${props => props.collapsed ? 0 : 1};
     pointer-events: ${props => props.collapsed ? "none" : "auto"};
     transition: .5s opacity;
 `
+export const Copyright = styled.span`
+    font-size: 0.8rem;
+    color: gray;
+`
+
 export const NavigationContainer = styled.div`
     position: absolute;
-    top: ${props => props.collapsed ? "30px" : "calc((100% - (220px + 4.5rem)) / 2)"};
     display: flex;
-    height: ${props => props.collapsed ? "70px" : "calc(220px + 4.5rem)"};
+    height: ${props => props.collapsed ? "60px" : "calc(210px + 4.5rem)"};
     flex-flow: column nowrap;
     align-items: center;
+    margin-top: ${props => props.collapsed ? "15px" : "calc((100vh - (210px + 4.5rem)) / 2)"};
     gap: 50px;
     pointer-events: auto;
     overflow: hidden;
     transition: .5s ease all;
 `
 export const Icon = styled.img`
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     transition: .3s opacity;
 
     &:hover {

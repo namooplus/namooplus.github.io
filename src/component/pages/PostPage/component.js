@@ -10,8 +10,9 @@ import {
     SubHeaderContainer, Title, InfoContainer, Date, TagLayout, Tag,
     PostContainer,
     MenuContainer,
-    CommentContainer
+    CommentContainer, CommentTitle
 } from "./style";
+import Comments from "../../common/comment/Comments";
 import FloatingButton from "../../common/button/FloatingButton";
 import { IoChatboxOutline, IoArrowUpOutline } from "react-icons/io5";
 
@@ -61,7 +62,8 @@ export const Group = {
     Comment: function(props) {
         return (
             <CommentContainer open={props.open}>
-
+                <CommentTitle>댓글</CommentTitle>
+                <Comments/>
             </CommentContainer>
         )
     },

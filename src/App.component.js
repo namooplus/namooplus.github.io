@@ -1,6 +1,6 @@
 import {
     BaseContainer, 
-    HeaderContainer, HeaderBackground, NavigationContainer, Icon, Navigation
+    HeaderContainer, HeaderBackground, Copyright, NavigationContainer, Icon, Navigation
 } from "./App.style";
 import namooIcon from "./image/namoo.png";
 
@@ -15,7 +15,9 @@ export const Group = {
         const collapse = () => props.setCollapsed(true);
         return (
             <HeaderContainer>
-                <HeaderBackground collapsed={props.collapsed}/>
+                <HeaderBackground collapsed={props.collapsed}>
+                    <Copyright>Copyright 2020-2021 나무 All rights reserved</Copyright>
+                </HeaderBackground>
                 <NavigationContainer collapsed={props.collapsed}>
                     <Icon src={namooIcon} onClick={() => props.setCollapsed(!props.collapsed)}/>
                     <Navigation to="/blog" selected={props.currentPath === '/blog'} onClick={collapse}>블로그</Navigation>

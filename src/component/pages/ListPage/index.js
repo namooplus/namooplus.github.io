@@ -16,6 +16,7 @@ function ListPage(props)
 
     useEffect(() => setCategory(categoryList[0]), [categoryList]);
     useEffect(() => setTag(tagList[0]), [tagList]);
+    useEffect(() => window.scrollTo({ top: 0, behavior: 'smooth'}), [category, tag]);
 
     // 클릭 이벤트
     const link = (route) => props.history.push(route);

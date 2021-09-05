@@ -1,19 +1,17 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 
-import { Container, Group } from "./component";
+import { Container, Group, Element } from "./component";
 
 function IntroPage(props)
 {
-    // Click event
-    const openGithub = () => window.open('https://github.com/namooplus');
-    const openInstagram = () => window.open('https://www.instagram.com/min.i.stop/'); 
-
     return (
         <Container.Base>
+            <Element.Title/>
+            <Element.Pencil/>
             <Group.Overview/>
             <Group.Experience/>
-            <Group.Contact openGithub={openGithub} openInstagram={openInstagram}/>
+            <Group.Contact/>
         </Container.Base>
     );
 }
