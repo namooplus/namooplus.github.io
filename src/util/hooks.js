@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 
-// ListPage
+// 카테고리 목록
 export function useCategoryList(postList) {
     const [categoryList, setCategoryList] = useState([]);
 
     useEffect(() => {
-        const tempCategoryList = ['추천'];
+        const tempCategoryList = [];
         postList.forEach(post => {
             if (!tempCategoryList.includes(post.category)) 
                 tempCategoryList.push(post.category);
@@ -15,16 +15,17 @@ export function useCategoryList(postList) {
 
     return categoryList;
 }
+
+// 포스트 목록
 export function useFilteredPostList(postList, category) {
     const [filteredPostList, setFilteredPostList] = useState([]);
 
-    useEffect(() => {
-        if (category === '추천') setFilteredPostList(postList.filter(post => post.recommend === true));
-        else setFilteredPostList(postList.filter(post => post.category === category));
-    }, [postList, category]);
+    useEffect(() => setFilteredPostList(postList.filter(post => post.category === category)), [postList, category]);
 
     return filteredPostList;
 }
+
+// 태그 목록
 export function useTagList(filteredPostList) {
     const [tagList, setTagList] = useState([]);
 
@@ -42,7 +43,7 @@ export function useTagList(filteredPostList) {
     return tagList;
 }
 
-// PostPage
+// 포스트 정보
 export function usePost(postId, postType, postList) {
     const [postInfo, setPostInfo] = useState();
     const [postContent, setPostContent] = useState('');
@@ -60,6 +61,8 @@ export function usePost(postId, postType, postList) {
 
     return { postInfo, postContent };
 }
+
+// 스크롤
 export function useScrollDirection() {
     const [scrollDirection, setScrollDirection] = useState('NONE');
 
@@ -87,4 +90,25 @@ export function useScrollDirection() {
     }, []);
 
     return scrollDirection;
+}
+export function useScrollTop() {
+    const [isScrollTop, setScrollTop] = useState(true);
+
+    let throttler;
+
+    const handleScroll = () => {
+        if (throttler) return;
+        throttler = setTimeout(() => {
+            if (window.scrollY === 0) setScrollTop(true);
+            else setScrollTop(false);
+            throttler = null;
+        }, 100);
+    }
+    
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    return isScrollTop;
 }

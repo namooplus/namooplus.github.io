@@ -63,7 +63,6 @@ export const Navigation = styled(Link)`
     font-size: 1.5rem;
     font-weight: 600;
     color: black;
-    opacity: ${props => props.selected ? 1 : 0.3};
     transition: .3s opacity;
 
     &:hover {

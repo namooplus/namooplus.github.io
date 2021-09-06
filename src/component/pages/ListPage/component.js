@@ -24,7 +24,7 @@ export const Group = {
     },
     Tag: function(props) {
         return (
-            <TagContainer hide={props.category === '추천'}>{props.tagList.map((tag, index) => 
+            <TagContainer>{props.tagList.map((tag, index) => 
                 <Tag key={index} onClick={() => props.setTag(tag)} selected={props.tag === tag}>{tag}</Tag>)}
             </TagContainer>
         )

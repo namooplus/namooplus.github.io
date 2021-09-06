@@ -43,7 +43,7 @@ export const Category = styled.button`
     }
 `
 export const TagContainer = styled.div`
-    display: ${props => props.hide ? "none" : "flex"};
+    display: flex;
     max-width: 1000px;
     flex-flow: row nowrap;
     justify-content: center;

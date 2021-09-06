@@ -14,7 +14,7 @@ import {
 } from "./style";
 import Comments from "../../common/comment/Comments";
 import FloatingButton from "../../common/button/FloatingButton";
-import { IoChatboxOutline, IoArrowUpOutline } from "react-icons/io5";
+import { IoArrowUpOutline } from "react-icons/io5";
 
 export const Container = {
     Base: function(props) {

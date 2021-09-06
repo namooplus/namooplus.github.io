@@ -34,6 +34,11 @@ const CardLayout = styled.div`
     @media only screen and (max-width: 675px) {
         width: 100%;
         flex-flow: row nowrap;
+        box-shadow: 0 2px 2px #DDDDDD;
+
+        &:hover {
+            box-shadow: 0 3px 3px #BBBBBB;
+        }
     }
 `
 const Thumbnail = styled.img`
@@ -55,12 +60,14 @@ const DescriptionLayout = styled.div`
     overflow: hidden;
 
     @media only screen and (max-width: 675px) {
+        flex: 1 1 0;
+        justify-content: center;
         padding: 15px;
     }
 `
 const Title = styled.h3`
     margin: 0;
-    line-height: 1rem;
+    line-height: 1.1rem;
     color: black;
     font-size: 1rem;
     white-space: nowrap;
@@ -70,7 +77,7 @@ const Title = styled.h3`
 const Date = styled.span`
     margin: 0;
     line-height: 0.8rem;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: gray;
 `
 const TagLayout = styled.div`
@@ -80,8 +87,8 @@ const TagLayout = styled.div`
 `
 const Tag = styled.span`
     padding: 5px 7px;
-    line-height: 0.7rem;
-    font-size: 0.7rem;
+    line-height: 0.6rem;
+    font-size: 0.6rem;
     background: #21D1C2;
     color: white;
 `

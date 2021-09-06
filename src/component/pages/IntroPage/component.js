@@ -4,6 +4,7 @@ import {
     Title, Pencil,
     SectionContainer, Subtitle, Description, ButtonContainer
 } from "./style";
+import SimpleButton from "../../common/button/SimpleButton";
 import IconButton from "../../common/button/IconButton";
 import { IoLogoGithub, IoLogoInstagram, IoLogoFacebook, IoLogoGooglePlaystore } from "react-icons/io5";
 import pencilIcon from "../../../image/pencil.PNG";
@@ -36,9 +37,11 @@ export const Group = {
                     - HTML/CSS/JavaScript/React를 이용한 웹 개발<br/>
                     - Python을 이용한 맥/윈도우용 프로그램 개발<br/>
                     - C++과 약간의 SQLite, Ruby 사용 경험<br/>
-                    - 최근에는 Flutter 개발을 위해 Dart를 공부하고 있습니다.<br/>
-                    - 추가로 상단 아이콘의 프로젝트 탭을 눌러 제가 참여한 프로젝트들을 확인하실 수 있습니다!
+                    - 최근에는 Flutter 개발을 위해 Dart를 공부하고 있습니다.
                 </Description>
+                <ButtonContainer>
+                    <SimpleButton onClick={props.goProjects}>더 많은 프로젝트 보러가기</SimpleButton>
+                </ButtonContainer>
             </SectionContainer>
         );
     },
@@ -47,7 +50,7 @@ export const Group = {
             <SectionContainer>
                 <Subtitle>더 알아보고 싶나요?</Subtitle>
                 <Description>
-                    상단 아이콘의 블로그 탭을 눌러 제가 운영하는 블로그도 구경해주세요!<br/>
+                    상단의 아이콘을 눌러 제가 운영하는 블로그도 구경해주세요!<br/>
                     아래는 저와 관련된 링크들입니다 :)<br/>
                 </Description>
                 <ButtonContainer>

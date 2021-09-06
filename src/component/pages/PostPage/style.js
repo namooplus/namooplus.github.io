@@ -26,6 +26,7 @@ export const Title = styled.h1`
     margin: 0;
     text-align: center;
     font-size: ${props => props.collapse ? "1rem" : "2rem"};
+    word-break: keep-all;
     color: black;
     transition: font-size ease .3s;
 `
