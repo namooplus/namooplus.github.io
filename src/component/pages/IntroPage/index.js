@@ -6,7 +6,7 @@ import { Container, Group, Element } from "./component";
 function IntroPage(props)
 {
     // 클릭 이벤트
-    const goProjects = () => props.history.push('/project');
+    const link = (route) => props.history.push(route);
 
     return (
         <Container.Base>
@@ -14,7 +14,7 @@ function IntroPage(props)
             <Element.Title/>
             <Element.Pencil/>
             <Group.Overview/>
-            <Group.Experience goProjects={goProjects}/>
+            <Group.Experience link={link}/>
             <Group.Contact/>
         </Container.Base>
     );

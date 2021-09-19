@@ -39,7 +39,6 @@ export const Group = {
                 <PostCard 
                     key={index}
                     title={post.title}
-                    thumbnail={require(`../../../post/${props.type}/${post.id}/thumbnail.png`).default}
                     date={post.date}
                     tag={post.tag}
                     onClick={() => props.link(`/post/${post.id}`)}/>)}

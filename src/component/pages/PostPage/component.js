@@ -33,8 +33,7 @@ export const Group = {
                 <InfoContainer collapse={props.collapse}>
                     <Date>{props.postInfo?.date}</Date>
                     <TagLayout>
-                    <Tag>{props.postInfo?.category}</Tag>&gt;
-                        {props.postInfo?.tag.map((tag, index) => <Tag key={index}>{tag}</Tag>)}
+                        {props.postInfo?.tag.map((tag, index) => <Tag key={index}>#{tag}</Tag>)}
                     </TagLayout>
                 </InfoContainer>
             </SubHeaderContainer>

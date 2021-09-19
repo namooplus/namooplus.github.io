@@ -1,3 +1,6 @@
+import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
+
 import {
     BaseContainer, 
     HeaderContainer, HeaderBackground, Copyright, NavigationContainer, Icon, Navigation
@@ -12,16 +15,20 @@ export const Container = {
 
 export const Group = {
     Header: function(props) {
-        const collapse = () => props.setCollapsed(true);
+        const currentLocation = useLocation();
+
+        const [isCollapsed, setCollapsed] = useState(true);
+        const collapse = () => setCollapsed(true);
+
         return (
             <HeaderContainer>
-                <HeaderBackground collapsed={props.collapsed}/>
-                <NavigationContainer collapsed={props.collapsed}>
-                    <Icon src={namooIcon} onClick={() => props.setCollapsed(!props.collapsed)}/>
-                    <Navigation to="/blog" selected={props.currentPath === '/blog'} onClick={collapse}>블로그</Navigation>
-                    <Navigation to="/project" selected={props.currentPath === '/project'} onClick={collapse}>프로젝트</Navigation>
-                    <Navigation to="/" selected={props.currentPath === '/'} onClick={collapse}>소개</Navigation>
-                    <Copyright collapsed={props.collapsed}>Copyright 2020-2021 나무 All rights reserved</Copyright>
+                <HeaderBackground collapsed={isCollapsed}/>
+                <NavigationContainer collapsed={isCollapsed}>
+                    <Icon src={namooIcon} onClick={() => setCollapsed(!isCollapsed)}/>
+                    <Navigation to="/blog" selected={currentLocation.pathname === '/blog'} onClick={collapse}>블로그</Navigation>
+                    <Navigation to="/project" selected={currentLocation.pathname === '/project'} onClick={collapse}>프로젝트</Navigation>
+                    <Navigation to="/" selected={currentLocation.pathname === '/'} onClick={collapse}>소개</Navigation>
+                    <Copyright collapsed={isCollapsed}>Copyright 2020-2021 나무 All rights reserved</Copyright>
                 </NavigationContainer>
             </HeaderContainer>
         );

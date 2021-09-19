@@ -50,6 +50,7 @@ export const NavigationContainer = styled.div`
 export const Icon = styled.img`
     width: 60px;
     height: 60px;
+    cursor: pointer;
     transition: .3s opacity;
 
     &:hover {
@@ -58,15 +59,19 @@ export const Icon = styled.img`
 `
 export const Navigation = styled(Link)`
     height: 1.5rem;
-    pointer-events: ${props => props.selected ? "none" : "auto"};
+    line-height: 1.5rem;
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: 600;
     color: black;
+    pointer-events: ${props => props.selected ? "none" : "auto"};
     transition: .3s opacity;
 
     &:hover {
-        opacity: 1;
+        opacity: 0.5;
+    }
+    &:active {
+        opacity: 0.3;
     }
 `
 

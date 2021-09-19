@@ -14,12 +14,13 @@ export default FloatingButton;
 const Button = styled.button`
     width: 50px;
     height: 50px;
+    padding: calc(25px - 0.7rem);
     border: none;
     border-radius: 50%;
     background-color: white;
     box-shadow: 0 10px 10px lightgray;
     color: black;
-    padding: calc(25px - 0.7rem);
+    cursor: pointer;
     transition: background-color 200ms, box-shadow 200ms;
 
     &:hover {

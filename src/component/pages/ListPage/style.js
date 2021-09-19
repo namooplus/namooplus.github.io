@@ -31,10 +31,12 @@ export const CategoryContainer = styled.div`
 export const Category = styled.button`
     padding: 0;
     border: none;
+    border-bottom: 2px solid ${props => props.selected ? 'black' : 'transparent'};
     background: none;
     font-size: 1.4rem;
     font-weight: 700;
     color: black;
+    cursor: pointer;
     opacity: ${props => props.selected ? 1 : 0.2};
     transition: opacity .3s;
 
@@ -49,17 +51,17 @@ export const TagContainer = styled.div`
     justify-content: center;
     align-items: center;
     padding: 0 10px;
+    gap: 15px;
     overflow-x: scroll;
-    border-radius: 30px;
-    background-color: #21D1C2;
 `
 export const Tag = styled.button`
-    padding: 5px 10px;
+    padding: 0;
     border: none;
     background: none;
     font-size: 0.9rem;
-    color: white;
-    opacity: ${props => props.selected ? 1 : 0.4};
+    color: black;
+    cursor: pointer;
+    opacity: ${props => props.selected ? 1 : 0.2};
     transition: opacity .3s;
 
     &:hover {

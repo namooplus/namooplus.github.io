@@ -15,6 +15,7 @@ function Comments(props) {
         utterances.setAttribute('async', true);
 
         ref.current.appendChild(utterances);
+        // eslint-disable-next-line
     }, []);
 
     return <CommentWrapper ref={ref}/>

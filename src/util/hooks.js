@@ -87,6 +87,7 @@ export function useScrollDirection() {
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
+        // eslint-disable-next-line
     }, []);
 
     return scrollDirection;
@@ -108,6 +109,7 @@ export function useScrollTop() {
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
+        // eslint-disable-next-line
     }, []);
 
     return isScrollTop;

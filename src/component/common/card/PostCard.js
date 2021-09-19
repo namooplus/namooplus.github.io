@@ -4,12 +4,9 @@ function PostCard(props)
 {
     return (
         <CardLayout onClick={props.onClick}>
-            <Thumbnail src={props.thumbnail}/>
-            <DescriptionLayout>
-                <Title>{props.title}</Title>
-                <Date>{props.date}</Date>
-                <TagLayout>{props.tag.map((tag, index) => <Tag key={index}>{tag}</Tag>)}</TagLayout>
-            </DescriptionLayout>
+            <TagLayout>{props.tag.map((tag, index) => <Tag key={index}>#{tag}</Tag>)}</TagLayout>
+            <Title>{props.title}</Title>
+            <Date>{props.date}</Date>
         </CardLayout>
     );
 }
@@ -19,10 +16,15 @@ export default PostCard;
 const CardLayout = styled.div`
     display: flex;
     width: 300px;
+    height: 250px;
     flex-flow: column nowrap;
-    background-color: white;
+    padding: 20px;
+    gap: 7px;
+    box-sizing: border-box;
+    background: linear-gradient(225deg, #21D1C2 0%, #21D1C2 30px, white 30px, white 100%);
     box-shadow: 0 10px 10px #DDDDDD;
-    transition: box-shadow .3s, opacity .3s;
+    cursor: pointer;
+    transition: all .3s;
 
     &:hover {
         box-shadow: 0 30px 30px #BBBBBB;
@@ -33,62 +35,50 @@ const CardLayout = styled.div`
 
     @media only screen and (max-width: 675px) {
         width: 100%;
-        flex-flow: row nowrap;
-        box-shadow: 0 2px 2px #DDDDDD;
+        height: unset;
+        padding: 15px;
+        box-shadow: 0 5px 5px #DDDDDD50;
 
         &:hover {
-            box-shadow: 0 3px 3px #BBBBBB;
+            box-shadow: 0 10px 10px #BBBBBB50;
         }
     }
 `
-const Thumbnail = styled.img`
-    width: 100%;
-    aspect-ratio: 1/1;
 
-    @media only screen and (max-width: 675px) {
-        width: calc(2.5rem + 54px);
-        height: calc(2.5rem + 54px);
-    }
-`
-const DescriptionLayout = styled.div`
+const TagLayout = styled.div`
+    flex: 1 1 0;
     display: flex;
     flex-flow: column nowrap;
-    padding: 20px;
-    box-sizing: border-box;
-    gap: 7px;
-    background-color: white;
-    overflow: hidden;
+    gap: 2px;
 
     @media only screen and (max-width: 675px) {
-        flex: 1 1 0;
-        justify-content: center;
-        padding: 15px;
+        flex-flow: row nowrap;
+        gap: 5px;
+    }
+`
+const Tag = styled.span`
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #21D1C2;
+
+    @media only screen and (max-width: 675px) {
+        font-size: 0.7rem;
     }
 `
 const Title = styled.h3`
     margin: 0;
-    line-height: 1.1rem;
     color: black;
-    font-size: 1rem;
+    font-size: 1.3rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    @media only screen and (max-width: 675px) {
+        font-size: 1.1rem;
+    }
 `
 const Date = styled.span`
     margin: 0;
-    line-height: 0.8rem;
     font-size: 0.7rem;
     color: gray;
-`
-const TagLayout = styled.div`
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 7px;
-`
-const Tag = styled.span`
-    padding: 5px 7px;
-    line-height: 0.6rem;
-    font-size: 0.6rem;
-    background: #21D1C2;
-    color: white;
 `
