@@ -16,8 +16,8 @@ function IntroPage(props)
             <Element.Title/>
             <Element.Pencil/>
             <Group.Overview/>
-            <Group.Experience link={link}/>
-            <Group.Contact/>
+            <Group.Experience/>
+            <Group.Contact link={link}/>
         </Container.Base>
     );
 }

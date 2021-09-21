@@ -39,10 +39,6 @@ export const Group = {
                     - C++과 약간의 SQLite, Ruby 사용 경험<br/>
                     - 최근에는 Flutter 개발을 위해 Dart를 공부하고 있습니다.
                 </Description>
-                <ButtonContainer>
-                    <SimpleButton onClick={() => props.link('/project')}>더 많은 프로젝트 보러가기</SimpleButton>
-                    <SimpleButton onClick={() => props.link('/blog')}>블로그 구경하러 가기</SimpleButton>
-                </ButtonContainer>
             </SectionContainer>
         );
     },
@@ -50,9 +46,12 @@ export const Group = {
         return (
             <SectionContainer>
                 <Subtitle>더 알아보고 싶나요?</Subtitle>
+                <ButtonContainer>
+                    <SimpleButton onClick={() => props.link('/project')}>나무의 프로젝트</SimpleButton>
+                    <SimpleButton onClick={() => props.link('/blog')}>나무의 블로그</SimpleButton>
+                </ButtonContainer>
                 <Description>
-                    상단의 아이콘을 눌러보세요!<br/>
-                    아래는 저와 관련된 링크들입니다 :)<br/>
+                    아래는 저와 관련된 링크입니다 :)
                 </Description>
                 <ButtonContainer>
                     <IconButton icon={IoLogoGithub} size="1.6rem" onClick={() => window.open('https://github.com/namooplus')}/>

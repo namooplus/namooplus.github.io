@@ -1,7 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import { useParams } from "react-router";
-import { usePost, useScrollTop } from "../../../util/hooks";
+import { usePost } from "../../../util/hooks";
 
 import Meta from "../../../util/Meta";
 import { Container, Group } from "./component";
@@ -14,19 +14,13 @@ function PostPage(props)
     const postList = require(`../../../post/${postType}/list.json`);
     const { postInfo, postContent } = usePost(postId, postType, postList);
 
-    // 스크롤 이벤트
-    const isScrollTop = useScrollTop();
-
-    // 클릭 이벤트
-    const scrollTop = () => window.scrollTo({ top: 0, behavior: 'smooth'});
-
     return (
-        <Container.Base postContent={postContent}>
+        <Container.Base>
             <Meta title={postInfo?.title}/>
-            <Group.SubHeader postInfo={postInfo} collapse={!isScrollTop}/>
+            <Group.SubHeader postInfo={postInfo}/>
             <Group.Post id={postId} type={postType} content={postContent}/>
             <Group.Comment/>
-            <Group.Menu scrollTop={scrollTop}/>
+            <Group.Menu/>
         </Container.Base>
     );
 }

@@ -51,11 +51,6 @@ export const Icon = styled.img`
     width: 60px;
     height: 60px;
     cursor: pointer;
-    transition: .3s opacity;
-
-    &:hover {
-        opacity: 0.5;
-    }
 `
 export const Navigation = styled(Link)`
     height: 1.5rem;

@@ -71,6 +71,11 @@ export const PostContainer = styled.div`
         width: 100%;
     }
 `
+export const Loading = styled.span`
+    margin: 30px;
+    font-size: 1rem;
+    color: black;
+`
 
 export const MenuContainer = styled.div`
     position: fixed;

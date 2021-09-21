@@ -1,4 +1,5 @@
 import { Redirect } from "react-router-dom";
+import { useScrollTop } from "../../../util/hooks";
 
 import ReactMarkdown from "react-markdown";
 import gfm from "remark-gfm";
@@ -8,7 +9,7 @@ import mdRenderer from "../../../util/mdRenderer";
 import {
     BaseContainer,
     SubHeaderContainer, Title, InfoContainer, Date, TagLayout, Tag,
-    PostContainer,
+    PostContainer, Loading,
     MenuContainer,
     CommentContainer, CommentTitle
 } from "./style";
@@ -18,19 +19,18 @@ import { IoArrowUpOutline } from "react-icons/io5";
 
 export const Container = {
     Base: function(props) {
-        return (<>{props.postContent !== 'e'
-            ? <BaseContainer>{props.children}</BaseContainer>
-            : <Redirect to="/error"/>
-        }</>)
+        return <BaseContainer>{props.children}</BaseContainer>
     },
 };
 
 export const Group = {
     SubHeader: function(props) {
+        const isScrollTop = useScrollTop();
+
         return (
             <SubHeaderContainer>
-                <Title collapse={props.collapse}>{props.postInfo?.title}</Title>
-                <InfoContainer collapse={props.collapse}>
+                <Title collapse={!isScrollTop}>{props.postInfo?.title}</Title>
+                <InfoContainer collapse={!isScrollTop}>
                     <Date>{props.postInfo?.date}</Date>
                     <TagLayout>
                         {props.postInfo?.tag.map((tag, index) => <Tag key={index}>#{tag}</Tag>)}
@@ -40,6 +40,12 @@ export const Group = {
         )
     },
     Post: function(props) {
+        if (props.content === '')
+            return <Loading>포스트를 불러오고 있어요</Loading>
+
+        else if (props.content === 'e')
+            return <Redirect to="/error"/>
+
         return (
             <PostContainer>
                 <ReactMarkdown
@@ -48,7 +54,7 @@ export const Group = {
                     components={mdRenderer(props.id, props.type)}
                     children={props.content}/>
             </PostContainer>
-        )
+        );
     },
     Comment: function(props) {
         return (
@@ -59,9 +65,11 @@ export const Group = {
         )
     },
     Menu: function(props) {
+        const scrollTop = () => window.scrollTo({ top: 0, behavior: 'smooth'});
+
         return (
             <MenuContainer>
-                <FloatingButton icon={IoArrowUpOutline} onClick={props.scrollTop} />
+                <FloatingButton icon={IoArrowUpOutline} onClick={scrollTop} />
             </MenuContainer>
         )
     },
