@@ -3,6 +3,7 @@ import { withRouter } from "react-router-dom";
 import { useParams } from "react-router";
 import { usePost, useScrollTop } from "../../../util/hooks";
 
+import Meta from "../../../util/Meta";
 import { Container, Group } from "./component";
 
 function PostPage(props)
@@ -21,6 +22,7 @@ function PostPage(props)
 
     return (
         <Container.Base postContent={postContent}>
+            <Meta title={postInfo?.title}/>
             <Group.SubHeader postInfo={postInfo} collapse={!isScrollTop}/>
             <Group.Post id={postId} type={postType} content={postContent}/>
             <Group.Comment/>

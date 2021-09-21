@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { withRouter } from "react-router-dom";
 import { useCategoryList, useFilteredPostList, useTagList } from "../../../util/hooks";
 
+import Meta from "../../../util/Meta";
 import { Container, Group } from "./component";
 
 function ListPage(props)
@@ -23,6 +24,7 @@ function ListPage(props)
 
     return (
         <Container.Base>
+            <Meta title={`나무의 노트 : ${props.type === 'blog' ? '블로그' : '프로젝트'}`}/>
             <Container.SubHeader>
                 <Group.Category categoryList={categoryList} category={category} setCategory={setCategory}/>
                 <Group.Tag tagList={tagList} tag={tag} setTag={setTag} category={category}/>

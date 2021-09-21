@@ -2,20 +2,29 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+
+    <!-- 사이트 정보 -->
+    <title>나무의 노트</title>
+    <meta name="description" content="대학생 개발자의 온갖 코딩 기록들"/>
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+    <!-- 오픈 그래프 -->
+    <meta property="og:title" content="나무의 노트"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://namoo.dev/"/>
+    <meta property="og:description" content="대학생 개발자의 온갖 코딩 기록들"/>
+    <meta property="og:image" content="%PUBLIC_URL%/logo512.png"/>
+    
+    <!-- 사이트 설정 -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#EEEEEE" />
-    <meta
-      name="description"
-      content="나무의 블로그"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
+
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -24,11 +33,20 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>나무의 노트</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Splash -->
+      <div style="display: flex; flex-flow: column nowrap; justify-content: center; align-items: center; height: 100vh;">
+        <span style="
+          font-size: 3rem; font-weight: 600; color: black; 
+          background: linear-gradient(to bottom, #21D167 0%, #21D1C2 100%); background-clip: unset;
+          -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+          나무의 노트
+        </span>
+      </div>
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
